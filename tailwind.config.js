@@ -31,8 +31,19 @@ export default {
         grayDark: "#111827",
         gray: "#6B7280",
         grayLight: "#D1D5DB",
+        grayBgLight: "#F1F5F9",
+        grayLabel: "#334155",
+        iconGray: "#94A3B8",
+
+        brandBlue: "#0E2D6B",
+        bgLightBlue: "#EAF2FD",
 
         background: "#F9FAFB",
+        bgLight: "#F8FAFC",
+
+        borderInput: "#CBD5E1",
+        borderCard: "#E2E8F0",
+        textMuted: "#64748B",
       },
 
       boxShadow: {
@@ -40,6 +51,7 @@ export default {
       },
 
       borderRadius: {
+        base: "12px",
         xl: "14px",
         "2xl": "20px",
       },
@@ -47,4 +59,4 @@ export default {
   },
 
   plugins: [],
-}
+};
