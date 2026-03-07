@@ -11,6 +11,8 @@ import Stages from "../pages/dashboard/Stages"
 import Payment from "../pages/dashboard/Payment"
 import Results from "../pages/dashboard/Results"
 import Settings from "../pages/dashboard/Settings"
+import Courses from './../pages/dashboard/Courses';
+import Dashboard from "../pages/dashboard/dashboard"
 
 export const router = createBrowserRouter([
   {
@@ -41,10 +43,13 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
+      { path: "dashboard", element: <Dashboard /> },
       { path: "users", element: <Users /> },
       { path: "stages", element: <Stages /> },
+      { path: "courses", element: <Courses /> },
       { path: "payment", element: <Payment /> },
       { path: "results", element: <Results /> },
+      { path: "contact-us", element: <contact-us /> },
       { path: "settings", element: <Settings /> },
     ],
   },
