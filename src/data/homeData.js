@@ -1,4 +1,14 @@
 // images you can edit it
+import { LuClock3 } from "react-icons/lu"
+import { LuBadgeCheck } from "react-icons/lu"
+import { LuUsers } from "react-icons/lu"
+
+export const navLinks = [
+  { name: "Courses", path: "#courses" },
+  { name: "Mentors", path: "#mentors" },
+  { name: "Pricing", path: "#pricing" },
+  { name: "About", path: "#about" },
+]
 
 export const heroData = {
   title: "Master Your Future with Expert-Led Courses",
@@ -16,14 +26,17 @@ export const statsData = [
 
 export const featuresData = [
   {
+    icon: LuClock3,
     title: "Learn at your own pace",
     description: "Access courses anytime that fit your schedule.",
   },
   {
+    icon: LuBadgeCheck,
     title: "Recognized certifications",
     description: "Earn certificates recognized by top companies.",
   },
   {
+    icon: LuUsers,
     title: "Interactive live sessions",
     description: "Join live workshops, Q&A sessions and projects.",
   },

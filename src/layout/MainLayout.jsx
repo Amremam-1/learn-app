@@ -4,10 +4,10 @@ import NavBar from "../components/NavBar"
 
 export default function MainLayout() {
   return (
-    <div className="flex">
+    <div className="bg-background">
       <NavBar />
 
-      <div className="flex-1 p-6">
+      <div className="">
         <Outlet />
       </div>
     </div>
