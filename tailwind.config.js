@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
+export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
 
   theme: {
@@ -23,27 +23,34 @@ module.exports = {
         primary: "#4F46E5",
         primaryHover: "#4338CA",
         secondary: "#F59E0B",
+
         danger: "#EF4444",
         success: "#22C55E",
+
         grayDark: "#111827",
         gray: "#6B7280",
         grayLight: "#D1D5DB",
-        bdColor: "#E2E8F0",
+
+        grayBgLight: "#F1F5F9",
+        grayLabel: "#334155",
+        iconGray: "#94A3B8",
+
+        brandBlue: "#0E2D6B",
+        bgLightBlue: "#EAF2FD",
+
         background: "#F9FAFB",
+        bgLight: "#F8FAFC",
+
+        borderInput: "#CBD5E1",
+        borderCard: "#E2E8F0",
+        textMuted: "#64748B",
+
+        bdColor: "#E2E8F0",
         textCo: "#0F172A",
         desc: "#475569",
-      },
-
-      boxShadow: {
-        card: "0 10px 25px rgba(0,0,0,0.05)",
-      },
-
-      borderRadius: {
-        xl: "14px",
-        "2xl": "20px",
       },
     },
   },
 
   plugins: [],
-}
+};
