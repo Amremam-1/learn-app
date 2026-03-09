@@ -11,6 +11,8 @@ import Stages from "../pages/dashboard/Stages"
 import Payment from "../pages/dashboard/Payment"
 import Results from "../pages/dashboard/Results"
 import Settings from "../pages/dashboard/Settings"
+import CreateLiveSession from "../pages/dashboard/CreateLiveSession"
+
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +48,8 @@ export const router = createBrowserRouter([
       { path: "payment", element: <Payment /> },
       { path: "results", element: <Results /> },
       { path: "settings", element: <Settings /> },
+      { path: "create-live-session", element: <CreateLiveSession /> },
+
     ],
   },
 ])

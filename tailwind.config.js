@@ -25,6 +25,12 @@ export default {
 
         secondary: "#F59E0B",
 
+        // NEW: brandBlue used across CreateLiveSession component
+        // Hex from original design: #2F80ED
+        brandBlue: "#2F80ED",
+        // NEW: light tint for brandBlue (used as subtle bg)
+        brandBlueLight: "#EEF6FF",
+
         danger: "#EF4444",
         success: "#22C55E",
 
