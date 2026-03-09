@@ -7,7 +7,7 @@ import CourseCover from "../../components/new-course/CourseCover";
 import Settings from "../../components/new-course/Settings";
 import SaveButton from "../../components/new-course/SaveButton";
 
-import { useCourseForm } from "../../components/new-course/useCourseForm";
+import { useCourseForm } from "../../hooks/useCourseForm";
 
 export default function CreateCourse() {
   const fileInputRef = useRef(null);

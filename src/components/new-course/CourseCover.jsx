@@ -7,11 +7,45 @@ export default function CourseCover({
   handleImageChange,
   errors,
 }) {
+
   const handleFile = (e) => {
     const file = e.target.files[0];
     if (!file) return;
+
+    const allowedTypes = [
+      "image/png",
+      "image/jpeg",
+      "image/jpg",
+      "image/gif",
+      "image/svg+xml",
+    ];
+
+    const maxSize = 2 * 1024 * 1024; // 2MB
+    const maxWidth = 800;
+    const maxHeight = 450;
+
+    // check type
+    if (!allowedTypes.includes(file.type)) {
+      return handleImageChange(null, null, "Only SVG, PNG, JPG or GIF allowed");
+    }
+
+    // check size
+    if (file.size > maxSize) {
+      return handleImageChange(null, null, "Image must be less than 2MB");
+    }
+
     const preview = URL.createObjectURL(file);
-    handleImageChange(file, preview);
+    const img = new Image();
+
+    img.onload = () => {
+      if (img.width > maxWidth || img.height > maxHeight) {
+        return handleImageChange(null, null, "Image must not exceed 800x450px");
+      }
+
+      handleImageChange(file, preview);
+    };
+
+    img.src = preview;
   };
 
   return (

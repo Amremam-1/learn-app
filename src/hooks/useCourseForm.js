@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { courseSchema } from "../../utils/validation/courseValidation";
+import { courseSchema } from "../utils/validation/courseValidation";
 
 export const useCourseForm = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const useCourseForm = () => {
     stage: "",
     subject: "",
     description: "",
-    price: "",
+    price: null,
     isFree: false,
     language: "English (US)",
     studentVisible: true,
@@ -39,7 +39,15 @@ export const useCourseForm = () => {
     clearFieldError(field);
   };
 
-  const handleImageChange = (file, preview) => {
+  const handleImageChange = (file, preview, errorMessage = null) => {
+    if (errorMessage) {
+      setErrors((prev) => ({
+        ...prev,
+        coverImage: errorMessage,
+      }));
+      return;
+    }
+
     setImagePreview(preview);
     setCourseData((prev) => ({ ...prev, coverImage: file }));
     clearFieldError("coverImage");
