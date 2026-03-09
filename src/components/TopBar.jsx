@@ -7,7 +7,7 @@ export default function TopBar() {
   return (
     <>
     <section className=' ps-11 md:ps-5 p-1 pe-2 bg-white '>
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between p-0 md:px-10'>
                 
           {/* Search */}
           <div className="relative sm:w-96 w-48">

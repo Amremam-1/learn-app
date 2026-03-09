@@ -1,31 +1,30 @@
 import { useState } from "react"
-import { CiLogout, CiMail } from "react-icons/ci";
 import { FaChalkboardTeacher, FaChartBar, FaChartLine, FaCog, FaGraduationCap, FaTachometerAlt, FaUser, FaUserFriends } from "react-icons/fa"
 import { FaBook } from "react-icons/fa6";
 import { LuGraduationCap, LuNotepadText } from "react-icons/lu";
-import { MdPayment } from "react-icons/md";
+import { MdKeyboardDoubleArrowLeft, MdMailOutline, MdPayment } from "react-icons/md";
 import { NavLink } from "react-router-dom"
 import imgDashboard from "../assets/imgDashboard/imgDashboard.png"
-import { IoMdClose } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BiLogOut } from "react-icons/bi";
 
 const SideBar = ({ role }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(true)
+    setIsOpen(!isOpen)
   }
 
     const menuConfig = {
     admin: [
-      { name: "dashboard", url: "dashboard", icon: <FaTachometerAlt /> },
-      { name: "users", url: "users", icon: <FaUserFriends /> },
-      { name: "stages", url: "stages", icon: <FaGraduationCap /> },
-      { name: "courses", url: "courses", icon: <FaBook /> },
-      { name: "payment", url: "payment", icon: <MdPayment /> },
-      { name: "results", url: "results", icon: <FaChartBar /> },
-      { name: "contact us", url: "contact-us", icon: <CiMail /> },
+      { name: "Dashboard", url: "dashboard", icon: <FaTachometerAlt /> },
+      { name: "Users", url: "users", icon: <FaUserFriends /> },
+      { name: "Stages", url: "stages", icon: <FaGraduationCap /> },
+      { name: "Courses", url: "courses", icon: <FaBook /> },
+      { name: "Payment", url: "payment", icon: <MdPayment /> },
+      { name: "Results", url: "results", icon: <FaChartBar /> },
+      { name: "Contact us", url: "contact-us", icon: <MdMailOutline /> },
     ],    
     student: [
       { name: "Profile", url: "/profile", icon: <FaUser /> },
@@ -45,20 +44,28 @@ const SideBar = ({ role }) => {
     </button>
     <section className={`fixed top-0 left-0 h-screen w-56 bg-[#F4F6FB] p-4 rounded-r-2xl transition-transform duration-300 z-50
       ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static`}>
-      {/* button to close sidebar */}
-      <button onClick={()=> setIsOpen(false)} className="md:hidden flex items-center font-bold hover:bg-danger transition bg-red-400 w-full rounded-xl p-2">
-        <IoMdClose className="text-2xl me-1"/> Close
-      </button>
       {/* dashboard logo */}
       {role === "admin" ? (
-      <picture className="flex justify-center">
-        <img className="w-full h-16 object-cover" loading="lazy" src={imgDashboard} alt="imgDashboard" />
-      </picture>
+        <div className="flex items-center justify-between ">
+          <picture className="flex justify-center w-full ">
+            <img className="w-full h-12 object-cover" loading="lazy" src={imgDashboard} alt="imgDashboard" />
+          </picture>
+            {/* button to close sidebar */}
+          <button onClick={()=> setIsOpen(false)} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
+            <MdKeyboardDoubleArrowLeft className="text-2xl " />
+          </button>
+        </div>
         ) : (
-          <div className="flex items-center justify-center text-3xl gap-2 ">
+        <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-center text-2xl gap-2 ">
             <LuGraduationCap />
             <h2 className="font-bold">UniExam</h2>
           </div>
+            {/* button to close sidebar */}
+          <button onClick={()=> setIsOpen(false)} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
+            <MdKeyboardDoubleArrowLeft className="text-2xl " />
+          </button>
+        </div>
         )}
 
       <div className="flex flex-col justify-between space-y-14 ">
@@ -66,7 +73,16 @@ const SideBar = ({ role }) => {
         <ul className="space-y-2">
           {menuConfig[role].map((item, index)=>{
             return <li key={index}>
-            <NavLink onClick={()=> setIsOpen(false)} to={item.url} className={({ isActive }) => isActive? "bg-primary text-white p-2 block rounded-xl": "text-gray-700 p-2 block"}>
+            <NavLink onClick={()=> setIsOpen(false)} to={item.url} 
+                className={({ isActive }) =>
+                  role === "admin"
+                    ? (isActive
+                        ? "bg-primary text-white p-2 block rounded-xl"
+                        : "text-gray-700 p-2 block")
+                    : (isActive
+                        ? "bg-[#4B505A] text-white p-2 block rounded-xl"
+                        : "text-gray-700 p-2 block")
+                }>              
               <div className="flex items-center gap-2">
                 {item.icon}
                 {item.name}
@@ -78,16 +94,30 @@ const SideBar = ({ role }) => {
 
         <ul className="border-t py-5 space-y-2">
           <li>
-            <NavLink to="settings" className={({ isActive }) => isActive? "bg-primary text-white p-2 block rounded-xl": "text-gray-700 p-2 block"}>
+            <NavLink to="settings" 
+                className={({ isActive }) =>
+                  role === "admin"
+                    ? (isActive
+                        ? "bg-primary text-white p-2 block rounded-xl"
+                        : "text-gray-700 p-2 block")
+                    : (isActive
+                        ? "bg-[#4B505A] text-white p-2 block rounded-xl"
+                        : "text-gray-700 p-2 block")
+                }>
               <div className="flex items-center gap-2">
-                <FaCog /> settings
+                <FaCog /> Settings
               </div>
             </NavLink>
           </li>
           <li>
-            <button className="text-gray-700 p-2 block hover:bg-primary hover:text-white transition rounded-xl w-full text-left">
+            <button 
+            className={
+                role === "admin"
+                  ? "text-[#180F6B] p-2 block hover:bg-primary hover:text-white transition rounded-xl w-full text-left"
+                  : "text-[#4B505A] p-2 block hover:bg-[#4B505A] hover:text-white transition rounded-xl w-full text-left"
+                }>
               <div className="flex items-center gap-2">
-                <CiLogout /> Logout
+                <BiLogOut /> Logout
               </div>
             </button>
           </li>          

@@ -13,7 +13,7 @@ export default function DashboardLayout() {
           <TopBar />
         </div>
         
-        <main className="p-6 bg-gray-50 flex-1 bg-yellow-300 mt-12">
+        <main className="p-6 bg-gray-50 flex-1 mt-12">
           <Outlet />
         </main>
       </div>
