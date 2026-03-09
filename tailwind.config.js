@@ -20,25 +20,32 @@ export default {
       },
 
       colors: {
-        primary: "#4F46E5",
-        primaryHover: "#4338CA",
+        // Primary color palette (indigo-based)
+        primary: "#4F46E5", // Main primary color (buttons, links, focus rings)
+        primaryHover: "#4338CA", // Primary hover state
+        primaryLight: "#EEF2FF", // Light primary background (cards, highlights)
 
-        secondary: "#F59E0B",
+        // Secondary/accent color (amber/yellow)
+        secondary: "#F59E0B", // Secondary accent color
+        secondaryLight: "#FEF3C7", // Light secondary for highlights
 
-        // NEW: brandBlue used across CreateLiveSession component
-        // Hex from original design: #2F80ED
-        brandBlue: "#2F80ED",
-        // NEW: light tint for brandBlue (used as subtle bg)
-        brandBlueLight: "#EEF6FF",
+        // Brand blue - used for hover borders and decorative elements
+        brandBlue: "#2F80ED", // Brand blue from design
+        brandBlueLight: "#EEF6FF", // Light tint for subtle backgrounds
 
-        danger: "#EF4444",
-        success: "#22C55E",
+        // Semantic colors
+        danger: "#EF4444", // Error states, destructive actions
+        success: "#22C55E", // Success states, confirmations
 
-        grayDark: "#111827",
-        gray: "#6B7280",
-        grayLight: "#D1D5DB",
-
-        background: "#F9FAFB",
+        // Gray scale - used throughout the UI
+        grayDark: "#111827", // Headings, primary text (gray-900)
+        grayMedium: "#374151", // Secondary text, labels (gray-700)
+        gray: "#6B7280", // Muted text, placeholders (gray-500)
+        grayMuted: "#9CA3AF", // Icons, disabled text (gray-400)
+        grayLight: "#D1D5DB", // Borders, dividers (gray-300)
+        grayBorder: "#E5E7EB", // Light borders (gray-200)
+        grayBorderLight: "#F3F4F6", // Subtle borders (gray-100)
+        background: "#F9FAFB", // Page background (gray-50)
       },
 
       boxShadow: {
@@ -53,4 +60,4 @@ export default {
   },
 
   plugins: [],
-}
+};
