@@ -43,7 +43,7 @@ const SideBar = ({ role }) => {
       <GiHamburgerMenu className="text-2xl " />
     </button>
     <section className={`fixed top-0 left-0 h-screen w-56 bg-[#F4F6FB] p-4 rounded-r-2xl transition-transform duration-300 z-50
-      ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static`}>
+      ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
       {/* dashboard logo */}
       {role === "admin" ? (
         <div className="flex items-center justify-between ">
@@ -51,7 +51,7 @@ const SideBar = ({ role }) => {
             <img className="w-full h-12 object-cover" loading="lazy" src={imgDashboard} alt="imgDashboard" />
           </picture>
             {/* button to close sidebar */}
-          <button onClick={()=> setIsOpen(false)} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
+          <button onClick={toggle} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
             <MdKeyboardDoubleArrowLeft className="text-2xl " />
           </button>
         </div>
@@ -62,7 +62,7 @@ const SideBar = ({ role }) => {
             <h2 className="font-bold">UniExam</h2>
           </div>
             {/* button to close sidebar */}
-          <button onClick={()=> setIsOpen(false)} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
+          <button onClick={toggle} className="md:hidden transition duration-300 rounded-full hover:bg-white  p-2">
             <MdKeyboardDoubleArrowLeft className="text-2xl " />
           </button>
         </div>
@@ -73,7 +73,7 @@ const SideBar = ({ role }) => {
         <ul className="space-y-2">
           {menuConfig[role].map((item, index)=>{
             return <li key={index}>
-            <NavLink onClick={()=> setIsOpen(false)} to={item.url} 
+            <NavLink onClick={toggle} to={item.url} 
                 className={({ isActive }) =>
                   role === "admin"
                     ? (isActive
@@ -104,7 +104,7 @@ const SideBar = ({ role }) => {
                         ? "bg-[#4B505A] text-white p-2 block rounded-xl"
                         : "text-gray-700 p-2 block")
                 }>
-              <div className="flex items-center gap-2">
+              <div onClick={toggle} className="flex items-center gap-2">
                 <FaCog /> Settings
               </div>
             </NavLink>

@@ -4,16 +4,16 @@ import TopBar from "../components/TopBar"
 
 export default function DashboardLayout() {
   return (
-    <div className="flex">
+    <div >
       <SideBar role="admin" />
       
-      <div className="flex-1 flex flex-col  ">
+      <div className="ml-0 md:ml-56 ">
         
-        <div className=" fixed top-0 w-full">
+        <div className=" fixed top-0 w-full z-40">
           <TopBar />
         </div>
         
-        <main className="p-6 bg-gray-50 flex-1 mt-12">
+        <main className="p-6 bg-gray-50 min-h-screen mt-12">
           <Outlet />
         </main>
       </div>
