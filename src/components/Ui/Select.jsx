@@ -11,7 +11,7 @@ export default function Select({
   return (
     <div className={cn("relative w-full", className)}>
       <select
-        className="w-full rounded-base border border-borderInput p-4 appearance-none"
+        className="w-full rounded-base border border-borderInput px-4 py-3 pr-12 appearance-none text-sm sm:text-base"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         {...props}
@@ -29,9 +29,9 @@ export default function Select({
       </select>
 
       {/* Custom arrow */}
-      <div className="pointer-events-none absolute inset-y-0 right-6 flex items-center">
+      <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
         <svg
-          className="w-6 h-6 text-textMuted"
+          className="w-4 h-4 sm:w-5 sm:h-5 text-textMuted"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
