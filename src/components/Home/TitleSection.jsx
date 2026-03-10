@@ -1,8 +1,8 @@
-import React from "react"
+import { cn } from "../../utils/utils"
 
-const TitleSection = ({ label, title }) => {
+const TitleSection = ({ label, title, className }) => {
   return (
-    <div className="text-center space-y-2 mb-12">
+    <div className={cn("space-y-2 mb-12", className)}>
       <p className="text-primary text-sm font-semibold uppercase tracking-widest">
         {label}
       </p>

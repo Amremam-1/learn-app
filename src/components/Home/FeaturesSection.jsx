@@ -6,6 +6,7 @@ const FeaturesSection = () => {
   return (
     <section className="py-16">
       <TitleSection
+        className="text-center"
         label="Why Choose Learnova"
         title="Learn Smarter, Not Harder"
       />

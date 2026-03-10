@@ -4,10 +4,11 @@ import Button from "../../components/Ui/Button"
 import IntroSection from "../../components/Home/IntroSection"
 import StatsSection from "../../components/Home/StatsSection"
 import FeaturesSection from "../../components/Home/FeaturesSection"
+import PopularCoursesSection from "../../components/Home/PopularCoursesSection"
 
 const Home = () => {
   return (
-    <section>
+    <section className="bg-background">
       <Container className="">
         <IntroSection />
       </Container>
@@ -16,6 +17,7 @@ const Home = () => {
       <Container>
         <FeaturesSection />
       </Container>
+      <PopularCoursesSection />
     </section>
   )
 }
