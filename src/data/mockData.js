@@ -1,3 +1,11 @@
+import { FaBook, FaChalkboardTeacher, FaChartBar, FaChartLine, FaGraduationCap, FaRegCheckCircle, FaTachometerAlt, FaUser, FaUserFriends } from "react-icons/fa"
+import { LuNotepadText, LuUserPlus } from "react-icons/lu"
+import { MdMailOutline, MdPayment } from "react-icons/md"
+import { FiUserCheck } from "react-icons/fi";
+import { LuUserX } from "react-icons/lu";
+import { FaArrowTrendDown, FaArrowTrendUp } from 'react-icons/fa6';
+import { PiClipboardText, PiFileText } from "react-icons/pi";
+
 export const dashboardStats = [
   {
     id: 1,
@@ -329,3 +337,110 @@ export const previousSessions = [
     image: "/images/live3.jpg",
   },
 ]
+
+// charts data
+    export const dataCharts = [
+        { name: "Jan", success: 65, fail: 28 },
+        { name: "Feb", success: 72, fail: 25 },
+        { name: "Mar", success: 68, fail: 30 },
+        { name: "Apr", success: 85, fail: 22 },
+        { name: "May", success: 78, fail: 26 },
+        { name: "Jun", success: 90, fail: 21 },
+        { name: "Jul", success: 88, fail: 24 },
+        { name: "Aug", success: 95, fail: 19 },
+        { name: "Sep", success: 92, fail: 22 },
+        { name: "Oct", success: 98, fail: 17 },
+        { name: "Nov", success: 94, fail: 20 },
+        { name: "Dec", success: 102, fail: 15 }
+    ];
+
+// admin and student sidebar 
+export const menuConfig = {
+  admin: [
+    { name: "Dashboard", url: "dashboard", icon: FaTachometerAlt },
+    { name: "Users", url: "users", icon: FaUserFriends },
+    { name: "Stages", url: "stages", icon: FaGraduationCap },
+    { name: "Courses", url: "courses", icon: FaBook },
+    { name: "Payment", url: "payment", icon: MdPayment },
+    { name: "Results", url: "results", icon: FaChartBar },
+    { name: "Contact us", url: "ContactUs", icon: MdMailOutline },
+  ],
+
+  student: [
+    { name: "Profile", url: "Profile", icon: FaUser },
+    { name: "Dashboard", url: "DashboardStudent", icon: FaTachometerAlt },
+    { name: "Teachers", url: "Teachers", icon: FaChalkboardTeacher },
+    { name: "Courses", url: "CoursesStudent", icon: FaBook },
+    { name: "Results Management", url: "ResultsManagement", icon: LuNotepadText },
+    { name: "Insight & Analysis", url: "InsightAnalysis", icon: FaChartLine },
+  ]
+};
+
+// cards data
+    export const cards = [
+      {
+        number: "2,847",
+        title: "Total Passed students",
+        icon: FiUserCheck ,
+        color: "bg-[#22C55E]"
+      },
+      {
+        number: "434",
+        title: "Total Failed Students",
+        icon: LuUserX ,
+        color: "bg-[#EB1A1A]"
+      },
+      {
+        number: "87%",
+        title: "Pass Rate Progress",
+        icon: FaArrowTrendUp ,
+        color: "bg-[#22C55E]"
+      },
+      {
+        number: "13%",
+        title: "Fail Rate Comparison",
+        icon: FaArrowTrendDown ,
+        color: "bg-[#EB1A1A]"
+      }
+    ];
+    
+// recentActivity data
+    export const recentActivity = [
+      {
+        title1: "New quiz created",
+        title2: "Mathematics Level 2",
+        icon: PiClipboardText,
+        borderColor:"border-[#EF4444]",
+        bgColor:'bg-[#FEF2F2]',
+        color: "text-[#EB1A1A]",
+        date: "5 minutes ago"
+      },
+      {
+        title1: "Results published",
+        title2: "Physics Level 3",
+        icon: FaRegCheckCircle,
+        borderColor:"border-[#22C55E]",
+        bgColor:'bg-[#F0FDF4]',
+        color: "text-[#10B981]",
+        date: "23 minutes ago"
+      },
+      {
+        title1: "New student enrolled",
+        title2: "Chemistry Level 1",
+        icon: LuUserPlus,
+        borderColor:"border-[#F59E0B]",
+        bgColor:'bg-[#FEFCE8]',
+        color: "text-[#F59E0B]",
+        date: "1 hour ago"
+      },
+      {
+        title1: "Lesson updated",
+        title2: "Biology Level 2",
+        icon: PiFileText,
+        borderColor:"border-[#0E2D6B]",
+        bgColor:'bg-[#EFF1F5]',
+        color: "text-[#000]",
+        date: "2 hours ago"
+      },
+    ]
+

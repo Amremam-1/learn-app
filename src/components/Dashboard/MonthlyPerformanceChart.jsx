@@ -7,23 +7,11 @@ import {
   CartesianGrid,
   Tooltip
 } from "recharts";
+import { dataCharts } from "../../data/mockData.js"
 
 export default function MonthlyPerformanceChart() {
-    const data = [
-        { name: "Jan", success: 65, fail: 28 },
-        { name: "Feb", success: 72, fail: 25 },
-        { name: "Mar", success: 68, fail: 30 },
-        { name: "Apr", success: 85, fail: 22 },
-        { name: "May", success: 78, fail: 26 },
-        { name: "Jun", success: 90, fail: 21 },
-        { name: "Jul", success: 88, fail: 24 },
-        { name: "Aug", success: 95, fail: 19 },
-        { name: "Sep", success: 92, fail: 22 },
-        { name: "Oct", success: 98, fail: 17 },
-        { name: "Nov", success: 94, fail: 20 },
-        { name: "Dec", success: 102, fail: 15 }
-    ];
-  return (
+
+    return (
     <>
      <section>
         <div className="border-[1px] border-[#DFE0E2] p-5 shadow-md rounded-xl mt-4">
@@ -32,7 +20,7 @@ export default function MonthlyPerformanceChart() {
                 <div className="w-full h-[300px]">
 
                     <ResponsiveContainer width="100%" height="100%">
-                        <AreaChart data={data}>
+                        <AreaChart data={dataCharts}>
 
                         <CartesianGrid strokeDasharray="3 3" />
 

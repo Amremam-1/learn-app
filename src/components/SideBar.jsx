@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { FaChalkboardTeacher, FaChartBar, FaChartLine, FaCog, FaGraduationCap, FaTachometerAlt, FaUser, FaUserFriends } from "react-icons/fa"
-import { FaBook } from "react-icons/fa6";
-import { LuGraduationCap, LuNotepadText } from "react-icons/lu";
-import { MdKeyboardDoubleArrowLeft, MdMailOutline, MdPayment } from "react-icons/md";
+import { FaCog } from "react-icons/fa"
+import { LuGraduationCap } from "react-icons/lu";
+import { MdKeyboardDoubleArrowLeft} from "react-icons/md";
 import { NavLink } from "react-router-dom"
 import imgDashboard from "../assets/imgDashboard/imgDashboard.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiLogOut } from "react-icons/bi";
+import { menuConfig } from "../data/mockData";
 
 const SideBar = ({ role }) => {
 
@@ -15,27 +15,7 @@ const SideBar = ({ role }) => {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-
-    const menuConfig = {
-    admin: [
-      { name: "Dashboard", url: "dashboard", icon: <FaTachometerAlt /> },
-      { name: "Users", url: "users", icon: <FaUserFriends /> },
-      { name: "Stages", url: "stages", icon: <FaGraduationCap /> },
-      { name: "Courses", url: "courses", icon: <FaBook /> },
-      { name: "Payment", url: "payment", icon: <MdPayment /> },
-      { name: "Results", url: "results", icon: <FaChartBar /> },
-      { name: "Contact us", url: "contact-us", icon: <MdMailOutline /> },
-    ],    
-    student: [
-      { name: "Profile", url: "/profile", icon: <FaUser /> },
-      { name: "Dashboard", url: "/dashboard", icon: <FaTachometerAlt /> },
-      { name: "Teachers", url: "/teachers", icon: <FaChalkboardTeacher /> },
-      { name: "Courses", url: "/courses", icon: <FaBook /> },
-      { name: "Results Management", url: "/results-management", icon: <LuNotepadText /> },
-      { name: "Insight & Analysis", url: "/insight-analysis", icon: <FaChartLine /> },
-    ]
-  };
-
+  
 
   return <>
       {/* button to open sidebar */}
@@ -72,6 +52,7 @@ const SideBar = ({ role }) => {
 
         <ul className="space-y-2">
           {menuConfig[role].map((item, index)=>{
+            const Icon = item.icon
             return <li key={index}>
             <NavLink onClick={toggle} to={item.url} 
                 className={({ isActive }) =>
@@ -84,7 +65,7 @@ const SideBar = ({ role }) => {
                         : "text-gray-700 p-2 block")
                 }>              
               <div className="flex items-center gap-2">
-                {item.icon}
+                <Icon />
                 {item.name}
               </div>
             </NavLink>

@@ -5,8 +5,6 @@ import MonthlyPerformanceChart from "../../components/Dashboard/MonthlyPerforman
 
 export default function Dashboard() {
 
-
-
   return (
     <>
     <section>

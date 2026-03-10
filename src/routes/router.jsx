@@ -13,6 +13,15 @@ import Results from "../pages/dashboard/Results"
 import Settings from "../pages/dashboard/Settings"
 import Courses from './../pages/dashboard/Courses';
 import Dashboard from "../pages/dashboard/dashboard"
+import Profile from './../pages/dashboard/Student/Profile';
+import DashboardStudent from "../pages/dashboard/Student/DashboardStudent"
+import Teachers from './../pages/dashboard/Student/Teachers';
+import CoursesStudent from "../pages/dashboard/Student/CoursesStudent"
+import ResultsManagement from "../pages/dashboard/Student/ResultsManagement"
+import InsightAnalysis from './../pages/dashboard/Student/InsightAnalysis';
+import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
+import ContactUs from "../pages/dashboard/ContactUs"
+import NotFound from "../components/NotFound"
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +47,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-
+// admin routes
   {
     path: "/dashboard",
     element: <DashboardLayout />,
@@ -49,8 +58,27 @@ export const router = createBrowserRouter([
       { path: "courses", element: <Courses /> },
       { path: "payment", element: <Payment /> },
       { path: "results", element: <Results /> },
-      { path: "contact-us", element: <contact-us /> },
+      { path: "contactUs", element: <ContactUs /> },
       { path: "settings", element: <Settings /> },
     ],
   },
+
+  // Dashboard Layout Student
+  {
+    path: "/student",
+    element: <DashboardLayoutStudent />,
+    children: [
+      { path: "Profile", element: <Profile /> },
+      { path: "DashboardStudent", element: <DashboardStudent /> },
+      { path: "Teachers", element: <Teachers /> },
+      { path: "CoursesStudent", element: <CoursesStudent /> },
+      { path: "ResultsManagement", element: <ResultsManagement /> },
+      { path: "InsightAnalysis", element: <InsightAnalysis /> },
+      { path: "settings", element: <Settings /> },
+    ],
+  },
+
+  // Not Found Route
+  { path: "*", element: <NotFound />}
+
 ])
