@@ -22,13 +22,10 @@ import InsightAnalysis from "../pages/Student/InsightAnalysis"
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import ContactUs from "../pages/dashboard/ContactUs"
 import NotFound from "../components/NotFound"
-import Users from "../pages/dashboard/Users"
-import Courses from "../pages/dashboard/Courses"
+
 import CreateCourse from "../pages/dashboard/CreateCourse"
-import Stages from "../pages/dashboard/Stages"
-import Payment from "../pages/dashboard/Payment"
-import Results from "../pages/dashboard/Results"
-import Settings from "../pages/dashboard/Settings"
+
+
 
 export const router = createBrowserRouter([
   {
