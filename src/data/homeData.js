@@ -1,4 +1,14 @@
 // images you can edit it
+import { LuClock3 } from "react-icons/lu"
+import { LuBadgeCheck } from "react-icons/lu"
+import { LuUsers } from "react-icons/lu"
+
+export const navLinks = [
+  { name: "Courses", path: "#courses" },
+  { name: "Mentors", path: "#mentors" },
+  { name: "Pricing", path: "#pricing" },
+  { name: "About", path: "#about" },
+]
 
 export const heroData = {
   title: "Master Your Future with Expert-Led Courses",
@@ -16,14 +26,17 @@ export const statsData = [
 
 export const featuresData = [
   {
+    icon: LuClock3,
     title: "Learn at your own pace",
     description: "Access courses anytime that fit your schedule.",
   },
   {
+    icon: LuBadgeCheck,
     title: "Recognized certifications",
     description: "Earn certificates recognized by top companies.",
   },
   {
+    icon: LuUsers,
     title: "Interactive live sessions",
     description: "Join live workshops, Q&A sessions and projects.",
   },
@@ -32,21 +45,53 @@ export const featuresData = [
 export const coursesData = [
   {
     id: 1,
-    title: "Full-Stack Web Development",
-    instructor: "Sarah Jenkins",
-    price: "$89.99",
+    title: "Digital Marketing Strategy",
+    instructor: "James Wilson",
+    instructorImage: "/images/instructor1.png",
+    price: "$49.99",
+    modules: 10,
+    rating: 4.7,
+    reviews: "3.4k",
   },
   {
     id: 2,
-    title: "UI/UX Design Essentials",
-    instructor: "Marcus Yu",
-    price: "$59.99",
+    title: "Full-Stack Web Development",
+    instructor: "Sarah Jenkins",
+    instructorImage: "/images/instructor2.png",
+    price: "$89.99",
+    modules: 12,
+    rating: 4.8,
+    reviews: "2.1k",
   },
   {
     id: 3,
+    title: "UI/UX Design Essentials",
+    instructor: "Marcus Yu",
+    instructorImage: "/images/instructor3.png",
+    price: "$59.99",
+    modules: 8,
+    rating: 4.6,
+    reviews: "1.8k",
+  },
+  {
+    id: 4,
     title: "Data Science Bootcamp",
     instructor: "Dr. Elena Rossi",
+    instructorImage: "/images/instructor4.png",
     price: "$129.99",
+    modules: 15,
+    rating: 4.9,
+    reviews: "5.2k",
+  },
+  {
+    id: 4,
+    title: "Data Science Bootcamp",
+    instructor: "Dr. Elena Rossi",
+    instructorImage: "/images/instructor4.png",
+    price: "$129.99",
+    modules: 15,
+    rating: 4.9,
+    reviews: "5.2k",
   },
 ]
 

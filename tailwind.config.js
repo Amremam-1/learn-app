@@ -22,7 +22,6 @@ export default {
       colors: {
         primary: "#4F46E5",
         primaryHover: "#4338CA",
-
         secondary: "#F59E0B",
 
         danger: "#EF4444",
@@ -32,19 +31,26 @@ export default {
         gray: "#6B7280",
         grayLight: "#D1D5DB",
 
+        grayBgLight: "#F1F5F9",
+        grayLabel: "#334155",
+        iconGray: "#94A3B8",
+
+        brandBlue: "#0E2D6B",
+        bgLightBlue: "#EAF2FD",
+
         background: "#F9FAFB",
-      },
+        bgLight: "#F8FAFC",
 
-      boxShadow: {
-        card: "0 10px 25px rgba(0,0,0,0.05)",
-      },
+        borderInput: "#CBD5E1",
+        borderCard: "#E2E8F0",
+        textMuted: "#64748B",
 
-      borderRadius: {
-        xl: "14px",
-        "2xl": "20px",
+        bdColor: "#E2E8F0",
+        textCo: "#0F172A",
+        desc: "#475569",
       },
     },
   },
 
   plugins: [],
-}
+};
