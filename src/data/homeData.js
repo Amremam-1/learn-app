@@ -83,6 +83,16 @@ export const coursesData = [
     rating: 4.9,
     reviews: "5.2k",
   },
+  {
+    id: 4,
+    title: "Data Science Bootcamp",
+    instructor: "Dr. Elena Rossi",
+    instructorImage: "/images/instructor4.png",
+    price: "$129.99",
+    modules: 15,
+    rating: 4.9,
+    reviews: "5.2k",
+  },
 ]
 
 export const testimonialsData = [
