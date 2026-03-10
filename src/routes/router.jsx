@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "../layout/MainLayout";
-import Home from "../pages/website/Home";
-import AuthLayout from "../layout/AuthLayout";
-import Login from "../pages/auth/Login";
-import Register from "../pages/auth/Register";
-import DashboardLayout from "../layout/DashboardLayout";
+import { createBrowserRouter } from "react-router-dom"
+import MainLayout from "../layout/MainLayout"
+import Home from "../pages/website/Home"
+import AuthLayout from "../layout/AuthLayout"
+import Login from "../pages/auth/Login"
+import Register from "../pages/auth/Register"
+import DashboardLayout from "../layout/DashboardLayout"
 
 import Users from "../pages/dashboard/Users"
 import Stages from "../pages/dashboard/Stages"
@@ -22,13 +22,13 @@ import InsightAnalysis from "../pages/Student/InsightAnalysis"
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import ContactUs from "../pages/dashboard/ContactUs"
 import NotFound from "../components/NotFound"
-import Users from "../pages/dashboard/Users";
-import Courses from "../pages/dashboard/Courses";
-import CreateCourse from "../pages/dashboard/CreateCourse";
-import Stages from "../pages/dashboard/Stages";
-import Payment from "../pages/dashboard/Payment";
-import Results from "../pages/dashboard/Results";
-import Settings from "../pages/dashboard/Settings";
+import Users from "../pages/dashboard/Users"
+import Courses from "../pages/dashboard/Courses"
+import CreateCourse from "../pages/dashboard/CreateCourse"
+import Stages from "../pages/dashboard/Stages"
+import Payment from "../pages/dashboard/Payment"
+import Results from "../pages/dashboard/Results"
+import Settings from "../pages/dashboard/Settings"
 
 export const router = createBrowserRouter([
   {
@@ -90,4 +90,3 @@ export const router = createBrowserRouter([
   // Not Found Route
   { path: "*", element: <NotFound /> },
 ])
-]);
