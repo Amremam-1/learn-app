@@ -357,7 +357,7 @@ export const previousSessions = [
 // admin and student sidebar 
 export const menuConfig = {
   admin: [
-    { name: "Dashboard", url: "dashboard", icon: FaTachometerAlt },
+    { name: "Dashboard", url: "", icon: FaTachometerAlt },
     { name: "Users", url: "users", icon: FaUserFriends },
     { name: "Stages", url: "stages", icon: FaGraduationCap },
     { name: "Courses", url: "courses", icon: FaBook },

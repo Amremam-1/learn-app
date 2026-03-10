@@ -11,14 +11,14 @@ import Stages from "../pages/dashboard/Stages"
 import Payment from "../pages/dashboard/Payment"
 import Results from "../pages/dashboard/Results"
 import Settings from "../pages/dashboard/Settings"
-import Courses from './../pages/dashboard/Courses';
+import Courses from "./../pages/dashboard/Courses"
 import Dashboard from "../pages/dashboard/dashboard"
-import Profile from './../pages/dashboard/Student/Profile';
-import DashboardStudent from "../pages/dashboard/Student/DashboardStudent"
-import Teachers from './../pages/dashboard/Student/Teachers';
-import CoursesStudent from "../pages/dashboard/Student/CoursesStudent"
-import ResultsManagement from "../pages/dashboard/Student/ResultsManagement"
-import InsightAnalysis from './../pages/dashboard/Student/InsightAnalysis';
+import Profile from "../pages/Student/Profile"
+import DashboardStudent from "../pages/Student/DashboardStudent"
+import Teachers from "../pages/Student/Teachers"
+import CoursesStudent from "../pages/Student/CoursesStudent"
+import ResultsManagement from "../pages/Student/ResultsManagement"
+import InsightAnalysis from "../pages/Student/InsightAnalysis"
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import ContactUs from "../pages/dashboard/ContactUs"
 import NotFound from "../components/NotFound"
@@ -47,12 +47,12 @@ export const router = createBrowserRouter([
       },
     ],
   },
-// admin routes
+  // admin routes
   {
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
-      { path: "dashboard", element: <Dashboard /> },
+      { index: true, element: <Dashboard /> },
       { path: "users", element: <Users /> },
       { path: "stages", element: <Stages /> },
       { path: "courses", element: <Courses /> },
@@ -79,6 +79,5 @@ export const router = createBrowserRouter([
   },
 
   // Not Found Route
-  { path: "*", element: <NotFound />}
-
+  { path: "*", element: <NotFound /> },
 ])
