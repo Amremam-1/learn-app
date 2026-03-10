@@ -3,7 +3,7 @@ import Button from "../Ui/Button"
 
 const IntroSection = () => {
   return (
-    <div className="py-12 flex md:justify-between flex-wrap flex-col lg:flex-row">
+    <div id="about" className="py-12 flex md:justify-between flex-wrap flex-col lg:flex-row">
       {/* Intro Text */}
       <div className="space-y-5 flex-1">
         <div className="h-[24px] w-fit px-2 py-4 text-primary rounded-full bg-[rgba(19,91,236,0.1)] flex items-center overflow-hidden">

@@ -14,7 +14,7 @@ import Button from "../Ui/Button"
 
 const PopularCoursesSection = () => {
   return (
-    <div className="py-20 bg-white px-2 sm:px-6 lg:px-8">
+    <div id="courses" className="py-20 bg-white px-2 sm:px-6 lg:px-8">
       <TitleSection
         className="text-start"
         label="Explore Programs"
@@ -22,12 +22,26 @@ const PopularCoursesSection = () => {
       />
 
       {/* Swiper Courses */}
-      <div>
+      <div className="relative overflow-hidden">
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
           navigation={true}
           pagination={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
@@ -83,7 +97,10 @@ const PopularCoursesSection = () => {
           ))}
         </Swiper>
 
-        <Button variant="primary" className="flex items-center justify-center mt-10 mx-auto">
+        <Button
+          variant="three"
+          className="flex items-center justify-center mt-10 mx-auto"
+        >
           View All Courses
         </Button>
       </div>

@@ -101,20 +101,24 @@ export const testimonialsData = [
     name: "Sarah Chen",
     role: "Junior UI Designer",
     review: "The UI/UX course completely changed my career path.",
+    rating: 5,
   },
   {
     id: 2,
     name: "David Miller",
     role: "Data Analyst",
     review: "Data Science Bootcamp was challenging but rewarding.",
+    rating: 4,
+  },
+  {
+    id: 3,
+    name: "Amr",
+    role: "frontned developer",
+    review:
+      "The UI/UX course completely changed my career path. The UI/UX course completely changed my career path.",
+    rating: 2,
   },
 ]
-
-export const ctaData = {
-  title: "Ready to transform your career today?",
-  description:
-    "Join thousands of learners and start building your skills today.",
-}
 
 export const footerInfo = {
   description:

@@ -6,4 +6,23 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: visible !important;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
 
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, -25px) !important;
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
