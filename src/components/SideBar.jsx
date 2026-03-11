@@ -71,7 +71,7 @@ const SideBar = ({ role }) => {
                   <NavLink
                     onClick={toggle}
                     to={item.url}
-                    end={item.name === "Dashboard"}
+                    end={item.name === "Dashboard" || item.name === "Profile"}
                     className={({ isActive }) =>
                       role === "admin" || role === "Instructer"
                         ? isActive

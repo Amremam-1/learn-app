@@ -6,7 +6,7 @@ import Login from "../pages/auth/Login"
 import Register from "../pages/auth/Register"
 import DashboardLayoutAdmin from "../layout/DashboardLayoutAdmin"
 
-import Dashboard from "../pages/dashboardAdmin/Dashboard"
+import Admin from "../pages/dashboardAdmin/Admin"
 import Users from "../pages/dashboardAdmin/Users"
 import Stages from "../pages/dashboardAdmin/Stages"
 import Payment from "../pages/dashboardAdmin/Payment"
@@ -33,6 +33,8 @@ import ResultsInstructer from "../pages/dashboardInstructer/ResultsInstructer"
 import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
 
 import NotFound from "../components/NotFound"
+import Instructer from "../pages/dashboardInStructer/Instructer"
+
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -62,7 +64,7 @@ export const router = createBrowserRouter([
     path: "/admin",
     element: <DashboardLayoutAdmin />,
     children: [
-      { index: true, element: <Dashboard /> },
+      { index: true, element: <Admin /> },
       { path: "users", element: <Users /> },
       { path: "courses", element: <Courses /> },
       { path: "courses/new", element: <CreateCourse /> },
@@ -80,7 +82,7 @@ export const router = createBrowserRouter([
     path: "/student",
     element: <DashboardLayoutStudent />,
     children: [
-      { path: "Profile", element: <Profile /> },
+      { index: true, element: <Profile /> },
       { path: "DashboardStudent", element: <DashboardStudent /> },
       { path: "Teachers", element: <Teachers /> },
       { path: "CoursesStudent", element: <CoursesStudent /> },
@@ -95,7 +97,7 @@ export const router = createBrowserRouter([
     path: "/instructer",
     element: <DashboardLayoutInstructer />,
     children: [
-      { index: true, element: <Dashboard /> },
+      { index: true, element: <Instructer /> },
       { path: "Courses", element: <CoursesInstructer /> },
       { path: "LiveSessions", element: <LiveSessionsInstructer /> },
       { path: "Exams", element: <ExamsInstructer /> },

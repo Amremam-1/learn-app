@@ -385,7 +385,7 @@ export const menuConfig = {
   ],
 
   student: [
-    { name: "Profile", url: "Profile", icon: FaUser },
+    { name: "Profile", url: "", icon: FaUser },
     { name: "Dashboard", url: "DashboardStudent", icon: FaTachometerAlt },
     { name: "Teachers", url: "Teachers", icon: FaChalkboardTeacher },
     { name: "Courses", url: "CoursesStudent", icon: FaBook },
