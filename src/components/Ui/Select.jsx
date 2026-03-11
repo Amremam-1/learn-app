@@ -9,18 +9,18 @@ export default function Select({
   ...props
 }) {
   return (
-    <div className={cn("relative w-full", className)}>
+    <div className="relative w-full">
       <select
-        className="w-full rounded-base border border-borderInput px-4 py-3 pr-12 appearance-none text-sm sm:text-base"
+        className={cn(
+          "w-full rounded-base border border-borderInput px-4 py-3 pr-12 appearance-none text-sm sm:text-base",
+          className,
+        )}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         {...props}
       >
-        {placeholder && (
-          <option value="" disabled>
-            {placeholder}
-          </option>
-        )}
+        {placeholder && <option value="">{placeholder}</option>}
+
         {options.map((opt, index) => (
           <option key={index} value={opt}>
             {opt}

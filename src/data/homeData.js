@@ -1,14 +1,28 @@
 // images you can edit it
-import { LuClock3 } from "react-icons/lu"
-import { LuBadgeCheck } from "react-icons/lu"
-import { LuUsers } from "react-icons/lu"
+import { LuClock3 } from "react-icons/lu";
+import { LuBadgeCheck } from "react-icons/lu";
+import { LuUsers } from "react-icons/lu";
+
+import ModernHistory from "../assets/Modern History.png";
+import Advanced from "../assets/Advanced Physics.png";
+import Quantum from "../assets/Quantum Mechanics.png";
+import Calculus from "../assets/Calculus.png";
+import ComputerScience from "../assets/Computer Science.png";
+import I1 from "../assets/i1.png";
+import I2 from "../assets/i2.png";
+import I3 from "../assets/i3.png";
+import I4 from "../assets/i4.png";
+import I5 from "../assets/i5.png";
+import I6 from "../assets/i6.png";
+import I7 from "../assets/i7.png";
+import I8 from "../assets/i8.png";
 
 export const navLinks = [
   { name: "Courses", path: "#courses" },
   { name: "Mentors", path: "#mentors" },
   { name: "Pricing", path: "#pricing" },
   { name: "About", path: "#about" },
-]
+];
 
 export const heroData = {
   title: "Master Your Future with Expert-Led Courses",
@@ -16,13 +30,13 @@ export const heroData = {
     "Join 10k+ learners gaining real-world skills from industry leaders.",
   primaryBtn: "Get Started Now",
   secondaryBtn: "View All Courses",
-}
+};
 
 export const statsData = [
   { number: "10K+", label: "Active Students" },
   { number: "500+", label: "Expert Mentors" },
   { number: "300+", label: "Premium Courses" },
-]
+];
 
 export const featuresData = [
   {
@@ -40,7 +54,7 @@ export const featuresData = [
     title: "Interactive live sessions",
     description: "Join live workshops, Q&A sessions and projects.",
   },
-]
+];
 
 export const coursesData = [
   {
@@ -118,12 +132,12 @@ export const testimonialsData = [
       "The UI/UX course completely changed my career path. The UI/UX course completely changed my career path.",
     rating: 2,
   },
-]
+];
 
 export const footerInfo = {
   description:
     "Empowering learners worldwide with accessible, high-quality, and career-focused online education from industry experts.",
-}
+};
 
 export const footerExploreLinks = [
   "Design Courses",
@@ -131,7 +145,7 @@ export const footerExploreLinks = [
   "Marketing",
   "Business Strategy",
   "Data Science",
-]
+];
 
 export const footerCompanyLinks = [
   "About Us",
@@ -139,14 +153,14 @@ export const footerCompanyLinks = [
   "Careers",
   "Success Stories",
   "Privacy Policy",
-]
+];
 
 export const footerContact = {
   phone: "+1 (555) 000-1234",
   email: "support@learnnova.com",
-}
+};
 
 export const footerCopyright = {
   text: "© 2024 EduMaster Inc. All rights reserved.",
   links: ["Terms of Service", "Cookie Settings"],
-}
+};
