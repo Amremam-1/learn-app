@@ -25,12 +25,12 @@ import ResultsManagement from "../pages/Student/ResultsManagement"
 import InsightAnalysis from "../pages/Student/InsightAnalysis"
 
 import DashboardLayoutInstructer from "../layout/DashboardLayoutInstructer"
-import CoursesInstructer from "../pages/dashboardInStructer/CoursesInstructer"
-import LiveSessionsInstructer from "../pages/dashboardInStructer/LiveSessionsInstructer"
-import ExamsInstructer from "../pages/DashboardInstructer/ExamsInstructer"
-import QuizzesInstructer from "../pages/DashboardInstructer/QuizzesInstructer"
-import ResultsInstructer from "../pages/DashboardInstructer/ResultsInstructer"
-import StudentsInstructer from "../pages/DashboardInstructer/StudentsInstructer"
+import CoursesInstructer from "../pages/dashboardInstructer/CoursesInstructer"
+import LiveSessionsInstructer from "../pages/dashboardInstructer/LiveSessionsInstructer"
+import ExamsInstructer from "../pages/dashboardInstructer/ExamsInstructer"
+import QuizzesInstructer from "../pages/dashboardInstructer/QuizzesInstructer"
+import ResultsInstructer from "../pages/dashboardInstructer/ResultsInstructer"
+import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
 
 import NotFound from "../components/NotFound"
 export const router = createBrowserRouter([

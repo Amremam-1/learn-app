@@ -1,10 +1,7 @@
+import React from "react"
 
-import React from 'react'
-
-export default function StudentsInstructer() {
-  return (
-    <div>
-      Students Instructer
-    </div>
-  )
+const StudentsInstructer = () => {
+  return <div>StudentsInstructer</div>
 }
+
+export default StudentsInstructer

@@ -1,10 +1,7 @@
+import React from "react"
 
-import React from 'react'
-
-export default function ExamsInstructer() {
-  return (
-    <div>
-      Exams Instructer
-    </div>
-  )
+const ExamsInstructer = () => {
+  return <div>ExamsInstructer</div>
 }
+
+export default ExamsInstructer

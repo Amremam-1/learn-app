@@ -1,10 +1,7 @@
+import React from "react"
 
-import React from 'react'
-
-export default function ResultsInstructer() {
-  return (
-    <div>
-      Results Instructer
-    </div>
-  )
+const ResultsInstructer = () => {
+  return <div>ResultsInstructer</div>
 }
+
+export default ResultsInstructer
