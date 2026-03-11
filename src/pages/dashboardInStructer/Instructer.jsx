@@ -1,9 +1,9 @@
 
-import Cards from "../../components/Dashboard/Cards";
-import RecentActivity from "../../components/Dashboard/RecentActivity";
-import MonthlyPerformanceChart from "../../components/Dashboard/MonthlyPerformanceChart.jsx";
+import Cards from "../../components/DashboardAdmin/Cards";
+import RecentActivity from "../../components/DashboardAdmin/RecentActivity";
+import MonthlyPerformanceChart from "../../components/DashboardAdmin/MonthlyPerformanceChart.jsx";
 
-export default function Dashboard() {
+export default function Instructer() {
 
   return (
     <>
