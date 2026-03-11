@@ -29,7 +29,7 @@ const SideBar = ({ role }) => {
       ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         {/* dashboard logo */}
-        {role === "admin" ? (
+        {role === "admin" || role === "Instructer" ? (
           <div className="flex items-center justify-between ">
             <picture className="w-full mb-5 flex relative">
               <img
@@ -73,7 +73,7 @@ const SideBar = ({ role }) => {
                     to={item.url}
                     end={item.name === "Dashboard"}
                     className={({ isActive }) =>
-                      role === "admin"
+                      role === "admin" || role === "Instructer"
                         ? isActive
                           ? "bg-primary text-white p-2 block rounded-xl"
                           : "text-gray-700 p-2 block"
@@ -97,7 +97,7 @@ const SideBar = ({ role }) => {
               <NavLink
                 to="settings"
                 className={({ isActive }) =>
-                  role === "admin"
+                  role === "admin" || role === "Instructer"
                     ? isActive
                       ? "bg-primary text-white p-2 block rounded-xl"
                       : "text-gray-700 p-2 block"
@@ -114,7 +114,7 @@ const SideBar = ({ role }) => {
             <li>
               <button
                 className={
-                  role === "admin"
+                  role === "admin" || role === "Instructer"
                     ? "text-[#180F6B] p-2 block hover:bg-primary hover:text-white transition rounded-xl w-full text-left"
                     : "text-[#4B505A] p-2 block hover:bg-[#4B505A] hover:text-white transition rounded-xl w-full text-left"
                 }
