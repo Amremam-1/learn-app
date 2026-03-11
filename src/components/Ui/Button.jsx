@@ -11,6 +11,7 @@ export default function Button({
   const variants = {
     primary: "bg-primary text-white",
     secondary: "bg-white border border-grayLight",
+    three: "bg-three text-textCo",
   }
 
   return (

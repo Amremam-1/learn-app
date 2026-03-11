@@ -23,7 +23,7 @@ export default {
         primary: "#4F46E5",
         primaryHover: "#4338CA",
         secondary: "#F59E0B",
-
+        three: "#135BEC1A",
         danger: "#EF4444",
         success: "#22C55E",
 
@@ -62,4 +62,4 @@ export default {
   },
 
   plugins: [],
-};
+}

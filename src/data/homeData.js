@@ -97,95 +97,17 @@ export const coursesData = [
     rating: 4.9,
     reviews: "5.2k",
   },
-];
-
-export const courses = [
-  {
-    id: 1,
-    grade: "GRADE 11",
-    subject: "Physics",
-    status: "PUBLISHED",
-    title: "Advanced Physics & Thermodynamics",
-    description:
-      "Deep dive into particle dynamics, thermal systems, and classical physics principles.",
-    students: 145,
-    units: 12,
-    extraStudents: 142,
-    image: Advanced,
-    instructors: [
-      { name: "Instructor 1", image: I1 },
-      { name: "Instructor 2", image: I2 },
-      { name: "Instructor 3", image: I3 },
-    ],
-    analytics: true,
-  },
-  {
-    id: 2,
-    grade: "GRADE 11",
-    subject: "History",
-    status: "PUBLISHED",
-    title: "Modern World History: 1945 - Present",
-    description:
-      "Exploring global political shifts, economic trends, and cultural transformations.",
-    students: 92,
-    units: 8,
-    extraStudents: 89,
-    image: ModernHistory,
-    instructors: [
-      { name: "Instructor 4", image: I4 },
-      { name: "Instructor 5", image: I5 },
-    ],
-    analytics: true,
-  },
-  {
-    id: 3,
-    grade: "GRADE 11",
-    subject: "Physics",
-    status: "DRAFT",
-    title: "Introduction to Quantum Mechanics",
-    description:
-      "Initial draft for elective physics module covering wave-particle duality.",
-    students: 80,
-    units: 0,
-    lastEdited: "2 days ago",
-    image: Quantum,
-    analytics: false,
-  },
   {
     id: 4,
-    grade: "GRADE 11",
-    subject: "Mathematics",
-    status: "UPDATED",
-    extraBadge: "NEW",
-    title: "Integrals & Differential Calculus",
-    description:
-      "Mastering the fundamentals of calculus, including limits, derivatives, and integrals.",
-    students: 868,
-    units: 10,
-    extraStudents: 118,
-    image: Calculus,
-    instructors: [
-      { name: "Instructor 6", image: I6 },
-      { name: "Instructor 7", image: I7 },
-    ],
-    analytics: true,
+    title: "Data Science Bootcamp",
+    instructor: "Dr. Elena Rossi",
+    instructorImage: "/images/instructor4.png",
+    price: "$129.99",
+    modules: 15,
+    rating: 4.9,
+    reviews: "5.2k",
   },
-  {
-    id: 5,
-    grade: "GRADE 11",
-    subject: "Computer Science",
-    status: "PUBLISHED",
-    title: "Algorithms & Data Structures",
-    description:
-      "A foundational course on computational logic, sorting, and data organization.",
-    students: 120,
-    units: 15,
-    extraStudents: 67,
-    image: ComputerScience,
-    instructors: [{ name: "Instructor 8", image: I8 }],
-    analytics: true,
-  },
-];
+]
 
 export const testimonialsData = [
   {
@@ -193,20 +115,24 @@ export const testimonialsData = [
     name: "Sarah Chen",
     role: "Junior UI Designer",
     review: "The UI/UX course completely changed my career path.",
+    rating: 5,
   },
   {
     id: 2,
     name: "David Miller",
     role: "Data Analyst",
     review: "Data Science Bootcamp was challenging but rewarding.",
+    rating: 4,
+  },
+  {
+    id: 3,
+    name: "Amr",
+    role: "frontned developer",
+    review:
+      "The UI/UX course completely changed my career path. The UI/UX course completely changed my career path.",
+    rating: 2,
   },
 ];
-
-export const ctaData = {
-  title: "Ready to transform your career today?",
-  description:
-    "Join thousands of learners and start building your skills today.",
-};
 
 export const footerInfo = {
   description:
