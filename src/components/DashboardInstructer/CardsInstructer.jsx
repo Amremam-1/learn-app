@@ -1,5 +1,5 @@
 
-import { cardsInstructerData } from "../../../data/mockData"
+import { cardsInstructerData } from "../../data/mockData"
 
 export default function CardsInstructer() {
   return (

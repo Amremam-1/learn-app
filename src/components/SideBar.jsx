@@ -3,7 +3,7 @@ import { FaCog } from "react-icons/fa"
 import { LuGraduationCap } from "react-icons/lu"
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md"
 import { NavLink } from "react-router-dom"
-import imgDashboard from "../assets/imgDashboard/imgDashboard.png"
+import logo from "../../public/images/logo.png"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BiLogOut } from "react-icons/bi"
 import { menuConfig } from "../data/mockData"
@@ -35,7 +35,7 @@ const SideBar = ({ role }) => {
               <img
                 className="w-[200px] h-12 object-cover"
                 loading="lazy"
-                src={imgDashboard}
+                src={logo}
                 alt="imgDashboard"
               />
             </picture>

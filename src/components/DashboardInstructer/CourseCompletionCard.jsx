@@ -1,5 +1,5 @@
 import { FaArrowTrendUp } from "react-icons/fa6";
-import {CoursesInstructerData} from "../../../data/mockData"
+import {CoursesInstructerData} from "../../data/mockData"
 
 export default function CourseCompletionCard() {
     const average =

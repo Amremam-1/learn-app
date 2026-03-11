@@ -6,7 +6,7 @@ import CourseCompletionCard from './CourseCompletionCard';
 import UpcomingLiveSessions from './UpcomingLiveSessions';
 import RecentActivities from './RecentActivities';
 
-export default function DashboardInstructer() {
+export default function MainViewInstructer() {
   return (
     <>
       <section>

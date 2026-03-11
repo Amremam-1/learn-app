@@ -37,7 +37,7 @@ const Courses = () => {
   }, [searchTerm, filters]);
 
   function addCourse() {
-    navigate("/dashboard/courses/new");
+    navigate("/admin/courses/new");
   }
 
   return (

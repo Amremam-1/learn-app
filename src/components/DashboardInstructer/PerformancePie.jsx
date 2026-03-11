@@ -4,12 +4,12 @@ import {
   Cell,
   Tooltip,
   ResponsiveContainer,
-  Legend
-} from "recharts";
+  Legend,
+} from "recharts"
 
-import { performanceDistributioninstructer } from '../../../data/mockData';
+import { performanceDistributioninstructer } from "../../data/mockData"
 
-const RADIAN = Math.PI / 180;
+const RADIAN = Math.PI / 180
 
 const renderCustomizedLabel = ({
   cx,
@@ -17,12 +17,12 @@ const renderCustomizedLabel = ({
   midAngle,
   innerRadius,
   outerRadius,
-  percent
+  percent,
 }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) / 2;
+  const radius = innerRadius + (outerRadius - innerRadius) / 2
 
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  const x = cx + radius * Math.cos(-midAngle * RADIAN)
+  const y = cy + radius * Math.sin(-midAngle * RADIAN)
 
   return (
     <text
@@ -35,14 +35,12 @@ const renderCustomizedLabel = ({
     >
       {(percent * 100).toFixed(0)}%
     </text>
-  );
-};
+  )
+}
 
 export default function PerformancePie() {
-
   return (
     <div className="bg-white p-4 rounded-xl shadow">
-
       <h3 className="font-semibold">Student Performance Distribution</h3>
       <p className="text-sm text-gray-400 mb-4">
         Overall grade breakdown across all courses
@@ -50,7 +48,6 @@ export default function PerformancePie() {
 
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
-
           <Pie
             data={performanceDistributioninstructer}
             dataKey="value"
@@ -72,7 +69,6 @@ export default function PerformancePie() {
             formatter={(value, entry) => `${value} ${entry.payload.value}%`}
             wrapperStyle={{ marginTop: 20 }}
           />
-
         </PieChart>
       </ResponsiveContainer>
 
@@ -80,7 +76,6 @@ export default function PerformancePie() {
         <p>Total Students Evaluated</p>
         <p className="text-[24px] font-bold">284</p>
       </div>
-
     </div>
-  );
+  )
 }
