@@ -8,12 +8,12 @@ export default function Cards() {
         {/* cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
         {cards.map((card, index) => {
-          const Icon = card.icon;
+          // const Icon = card.icon;
           return (
           <div key={index}
             className="flex items-center p-3 border-1 border-[#6B7280] shadow-md rounded-md gap-2">
             <div className={`${card.color} text-white p-3 rounded-md`}>
-              <Icon />
+              <card.icon />
             </div>
             <div>
               <p className="text-[#2B2E33] text-2xl font-bold">{card.number}</p>
