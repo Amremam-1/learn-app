@@ -1,11 +1,12 @@
+
 import { Outlet } from "react-router-dom"
 import SideBar from "../components/SideBar"
 import TopBar from "../components/TopBar"
 
-export default function DashboardLayout() {
+export default function DashboardLayoutInstructer() {
   return (
     <div >
-      <SideBar role="admin" />
+      <SideBar role="Instructer" />
       
       <div className="ml-0 md:ml-56 ">
         
@@ -19,5 +20,6 @@ export default function DashboardLayout() {
       </div>
 
     </div>
+
   )
 }

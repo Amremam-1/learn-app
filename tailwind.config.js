@@ -49,6 +49,15 @@ export default {
         textCo: "#0F172A",
         desc: "#475569",
       },
+      boxShadow: {
+        card: "0 10px 25px rgba(0,0,0,0.05)",
+      },
+
+      borderRadius: {
+        base: "12px",
+        xl: "14px",
+        "2xl": "20px",
+      },
     },
   },
 

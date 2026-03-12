@@ -3,6 +3,20 @@ import { LuClock3 } from "react-icons/lu"
 import { LuBadgeCheck } from "react-icons/lu"
 import { LuUsers } from "react-icons/lu"
 
+import ModernHistory from "../../public/images/Modern History.png"
+import Advanced from "../../public/images/Advanced Physics.png"
+import Quantum from "../../public/images/Quantum Mechanics.png"
+import Calculus from "../../public/images/Calculus.png"
+import ComputerScience from "../../public/images/Computer Science.png"
+import I1 from "../../public/images/i1.png"
+import I2 from "../../public/images/i2.png"
+import I3 from "../../public/images/i3.png"
+import I4 from "../../public/images/i4.png"
+import I5 from "../../public/images/i5.png"
+import I6 from "../../public/images/i6.png"
+import I7 from "../../public/images/i7.png"
+import I8 from "../../public/images/i8.png"
+
 export const navLinks = [
   { name: "Courses", path: "#courses" },
   { name: "Mentors", path: "#mentors" },
@@ -92,6 +106,94 @@ export const coursesData = [
     modules: 15,
     rating: 4.9,
     reviews: "5.2k",
+  },
+]
+
+export const courses = [
+  {
+    id: 1,
+    grade: "GRADE 11",
+    subject: "Physics",
+    status: "PUBLISHED",
+    title: "Advanced Physics & Thermodynamics",
+    description:
+      "Deep dive into particle dynamics, thermal systems, and classical physics principles.",
+    students: 145,
+    units: 12,
+    extraStudents: 142,
+    image: Advanced,
+    instructors: [
+      { name: "Instructor 1", image: I1 },
+      { name: "Instructor 2", image: I2 },
+      { name: "Instructor 3", image: I3 },
+    ],
+    analytics: true,
+  },
+  {
+    id: 2,
+    grade: "GRADE 11",
+    subject: "History",
+    status: "PUBLISHED",
+    title: "Modern World History: 1945 - Present",
+    description:
+      "Exploring global political shifts, economic trends, and cultural transformations.",
+    students: 92,
+    units: 8,
+    extraStudents: 89,
+    image: ModernHistory,
+    instructors: [
+      { name: "Instructor 4", image: I4 },
+      { name: "Instructor 5", image: I5 },
+    ],
+    analytics: true,
+  },
+  {
+    id: 3,
+    grade: "GRADE 11",
+    subject: "Physics",
+    status: "DRAFT",
+    title: "Introduction to Quantum Mechanics",
+    description:
+      "Initial draft for elective physics module covering wave-particle duality.",
+    students: 80,
+    units: 0,
+    lastEdited: "2 days ago",
+    image: Quantum,
+    analytics: false,
+  },
+  {
+    id: 4,
+    grade: "GRADE 11",
+    subject: "Mathematics",
+    status: "UPDATED",
+    extraBadge: "NEW",
+    title: "Integrals & Differential Calculus",
+    description:
+      "Mastering the fundamentals of calculus, including limits, derivatives, and integrals.",
+    students: 868,
+    units: 10,
+    extraStudents: 118,
+    image: Calculus,
+    instructors: [
+      { name: "Instructor 6", image: I6 },
+      { name: "Instructor 7", image: I7 },
+    ],
+    analytics: true,
+  },
+  {
+    id: 5,
+    grade: "GRADE 11",
+    subject: "Computer Science",
+    status: "PUBLISHED",
+    title: "Algorithms & Data Structures",
+    description:
+      "A foundational course on computational logic, sorting, and data organization.",
+    students: 120,
+    units: 15,
+    extraStudents: 67,
+    image: ComputerScience,
+    instructors: [{ name: "Instructor 8", image: I8 }],
+    analytics: true,
   },
 ]
 

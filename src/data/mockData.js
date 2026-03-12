@@ -1,10 +1,17 @@
 import { FaBook, FaChalkboardTeacher, FaChartBar, FaChartLine, FaGraduationCap, FaRegCheckCircle, FaTachometerAlt, FaUser, FaUserFriends } from "react-icons/fa"
 import { LuNotepadText, LuUserPlus } from "react-icons/lu"
-import { MdMailOutline, MdPayment } from "react-icons/md"
+import { MdDashboard, MdMailOutline, MdPayment } from "react-icons/md"
 import { FiUserCheck } from "react-icons/fi";
 import { LuUserX } from "react-icons/lu";
 import { FaArrowTrendDown, FaArrowTrendUp } from 'react-icons/fa6';
-import { PiClipboardText, PiFileText } from "react-icons/pi";
+import { PiClipboardText, PiFileText, PiGraduationCapThin, PiStudentLight, PiUsersThree } from "react-icons/pi";
+import { IoBookOutline } from "react-icons/io5";
+import { AiOutlineFileText } from "react-icons/ai";
+import { BsQuestionSquare } from "react-icons/bs";
+import { TbClipboardText } from "react-icons/tb";
+
+
+
 
 export const dashboardStats = [
   {
@@ -115,18 +122,21 @@ export const recentActivities = [
     type: "submission",
     message: "New submission for Midterm Exam",
     time: "5 minutes ago",
+    color: "#4A3ADF",
   },
   {
     id: 2,
     type: "grade",
     message: "Grade approved by Admin",
     time: "2 hours ago",
+    color: "#3FD978",
   },
   {
     id: 3,
     type: "live-session",
     message: "Student joined live session",
     time: "20 minutes ago",
+    color: "#F1A628",
   },
 ]
 
@@ -354,6 +364,14 @@ export const previousSessions = [
         { name: "Dec", success: 102, fail: 15 }
     ];
 
+// charts data instructer 
+export const performanceDistributioninstructer = [
+  { label: "Excellent", value: 42, color: "#4F46E5" },
+  { label: "Very Good", value: 35, color: "#3B82F6" },
+  { label: "Good", value: 18, color: "#F59E0B" },
+  { label: "Needs Improvement", value: 5, color: "#EF4444" }
+];
+
 // admin and student sidebar 
 export const menuConfig = {
   admin: [
@@ -367,12 +385,22 @@ export const menuConfig = {
   ],
 
   student: [
-    { name: "Profile", url: "Profile", icon: FaUser },
+    { name: "Profile", url: "", icon: FaUser },
     { name: "Dashboard", url: "DashboardStudent", icon: FaTachometerAlt },
     { name: "Teachers", url: "Teachers", icon: FaChalkboardTeacher },
     { name: "Courses", url: "CoursesStudent", icon: FaBook },
     { name: "Results Management", url: "ResultsManagement", icon: LuNotepadText },
     { name: "Insight & Analysis", url: "InsightAnalysis", icon: FaChartLine },
+  ],
+
+  Instructer: [
+    { name: "Dashboard", url: "", icon: MdDashboard },
+    { name: "Courses", url: "Courses", icon: IoBookOutline  },
+    { name: "Live sessions", url: "LiveSessions", icon: FaChalkboardTeacher },
+    { name: "Exams", url: "Exams", icon: TbClipboardText  },
+    { name: "Quizzes", url: "Quizzes", icon: BsQuestionSquare  },
+    { name: "Results", url: "Results", icon: AiOutlineFileText  },
+    { name: "Students", url: "Students", icon: PiUsersThree  },
   ]
 };
 
@@ -400,6 +428,34 @@ export const menuConfig = {
         number: "13%",
         title: "Fail Rate Comparison",
         icon: FaArrowTrendDown ,
+        color: "bg-[#EB1A1A]"
+      }
+    ];
+
+    // cards data for instructer
+    export const cardsInstructerData = [
+      {
+        number: "12",
+        title: "Total Courses",
+        icon: PiGraduationCapThin  ,
+        color: "bg-[#5B4CE6]"
+      },
+      {
+        number: "250",
+        title: "Total Students",
+        icon: PiStudentLight  ,
+        color: "bg-[#22C55E]"
+      },
+      {
+        number: "3",
+        title: "Active Exams",
+        icon: TbClipboardText  ,
+        color: "bg-[#F59E0B]"
+      },
+      {
+        number: "5",
+        title: "Active Quizzes",
+        icon: BsQuestionSquare  ,
         color: "bg-[#EB1A1A]"
       }
     ];
@@ -443,4 +499,12 @@ export const menuConfig = {
         date: "2 hours ago"
       },
     ]
+
+// Course Completion Card
+export const CoursesInstructerData = [
+  { name: "Advanced Mathematics", students: 45, percent: 87 },
+  { name: "Physics 101", students: 52, percent: 72 },
+  { name: "Chemistry Basics", students: 38, percent: 64 },
+  { name: "Biology Lab", students: 41, percent: 91 },
+];
 

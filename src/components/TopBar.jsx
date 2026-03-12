@@ -1,7 +1,7 @@
 
 import { FaSearch } from 'react-icons/fa'
 import { IoIosNotificationsOutline } from 'react-icons/io'
-import imgLogo from '../assets/imgDashboard/Logo.jpg'
+import person from '../../public/images/person.jpg'
 
 export default function TopBar() {
   return (
@@ -20,7 +20,7 @@ export default function TopBar() {
           <div className='flex items-center gap-3 md:pe-56'>
             <IoIosNotificationsOutline className='text-2xl cursor-pointer'/>
             <picture>
-              <img className='w-8 h-8 rounded-full' loading='lazy' src={imgLogo} alt="Logo" />
+              <img className='w-8 h-8 rounded-full' loading='lazy' src={person} alt="Logo" />
             </picture>
           </div>
       
