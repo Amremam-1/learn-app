@@ -15,6 +15,7 @@ import Settings from "../pages/dashboardAdmin/Settings"
 import Courses from "../pages/dashboardAdmin/Courses"
 import ContactUs from "../pages/dashboardAdmin/ContactUs"
 import CreateCourse from "../pages/dashboardAdmin/CreateCourse"
+import CreateLiveSession from "../pages/dashboardAdmin/CreateLiveSession"
 
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import Profile from "../pages/Student/Profile"
@@ -34,6 +35,7 @@ import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
 
 import NotFound from "../components/NotFound"
 import Instructer from "../pages/dashboardInStructer/Instructer"
+
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +76,7 @@ export const router = createBrowserRouter([
       { path: "results", element: <Results /> },
       { path: "contactUs", element: <ContactUs /> },
       { path: "settings", element: <Settings /> },
+       { path: "create-live-session", element: <CreateLiveSession /> },
     ],
   },
 
