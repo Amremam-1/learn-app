@@ -6,7 +6,7 @@ import Select from "../../components/Ui/Select"
 import Button from "../../components/Ui/Button"
 import { FaRegCircleQuestion } from "react-icons/fa6"
 
-const QuizForm = () => {
+const QuizForm = ({ onNext }) => {
   const {
     register,
     handleSubmit,
@@ -19,6 +19,7 @@ const QuizForm = () => {
 
   const onSubmit = (data) => {
     console.log(data)
+    onNext(data)
   }
   return (
     <form className="grid gap-6" onSubmit={handleSubmit(onSubmit)}>

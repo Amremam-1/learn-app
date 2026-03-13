@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { FaArrowLeft } from "react-icons/fa"
 import QuizForm from "../../components/QuizzesInstructor/QuizForm"
+import CreateQuizStep2 from "../../components/QuizzesInstructor/CreateQuizStep2"
 
 const QuizzesInstructer = () => {
+  const [steps, setSteps] = useState(1)
+  const [quizData, setQuizData] = useState(null)
+
+  const handleNext = (data) => {
+    setQuizData(data)
+    setSteps(2)
+  }
   return (
     <div className="flex flex-col p-6 gap-8">
       <h1 className="flex gap-4 items-center text-xl font-semibold">
@@ -17,8 +25,16 @@ const QuizzesInstructer = () => {
         </div>
 
         <div className="flex gap-2 w-full h-2">
-          <div className="w-1/2 h-2 bg-indigo-600 rounded-full" />
-          <div className="w-1/2 h-2 bg-zinc-300 rounded-full" />
+          <div
+            className={`w-1/2 h-2 rounded-full ${
+              steps >= 1 ? "bg-indigo-600" : "bg-zinc-300"
+            }`}
+          />
+          <div
+            className={`w-1/2 h-2 rounded-full ${
+              steps >= 2 ? "bg-indigo-600" : "bg-zinc-300"
+            }`}
+          />
         </div>
       </div>
 
@@ -26,8 +42,8 @@ const QuizzesInstructer = () => {
         Let's start with the essentials. Provide the core details for your new
         assessment.
       </p>
-
-      <QuizForm />
+      {steps === 1 && <QuizForm onNext={handleNext} />}
+      {steps === 2 && <CreateQuizStep2 data={quizData} />}
     </div>
   )
 }
