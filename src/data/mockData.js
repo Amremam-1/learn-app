@@ -349,20 +349,20 @@ export const previousSessions = [
 ]
 
 // charts data
-    export const dataCharts = [
-        { name: "Jan", success: 65, fail: 28 },
-        { name: "Feb", success: 72, fail: 25 },
-        { name: "Mar", success: 68, fail: 30 },
-        { name: "Apr", success: 85, fail: 22 },
-        { name: "May", success: 78, fail: 26 },
-        { name: "Jun", success: 90, fail: 21 },
-        { name: "Jul", success: 88, fail: 24 },
-        { name: "Aug", success: 95, fail: 19 },
-        { name: "Sep", success: 92, fail: 22 },
-        { name: "Oct", success: 98, fail: 17 },
-        { name: "Nov", success: 94, fail: 20 },
-        { name: "Dec", success: 102, fail: 15 }
-    ];
+export const dataCharts = [
+  { name: "Jan", success: 65, fail: 28 },
+  { name: "Feb", success: 72, fail: 25 },
+  { name: "Mar", success: 68, fail: 30 },
+  { name: "Apr", success: 85, fail: 22 },
+  { name: "May", success: 78, fail: 26 },
+  { name: "Jun", success: 90, fail: 21 },
+  { name: "Jul", success: 88, fail: 24 },
+  { name: "Aug", success: 95, fail: 19 },
+  { name: "Sep", success: 92, fail: 22 },
+  { name: "Oct", success: 98, fail: 17 },
+  { name: "Nov", success: 94, fail: 20 },
+  { name: "Dec", success: 102, fail: 15 }
+];
 
 // charts data instructer 
 export const performanceDistributioninstructer = [
@@ -395,110 +395,110 @@ export const menuConfig = {
 
   Instructer: [
     { name: "Dashboard", url: "", icon: MdDashboard },
-    { name: "Courses", url: "Courses", icon: IoBookOutline  },
+    { name: "Courses", url: "Courses", icon: IoBookOutline },
     { name: "Live sessions", url: "LiveSessions", icon: FaChalkboardTeacher },
-    { name: "Exams", url: "Exams", icon: TbClipboardText  },
-    { name: "Quizzes", url: "Quizzes", icon: BsQuestionSquare  },
-    { name: "Results", url: "Results", icon: AiOutlineFileText  },
-    { name: "Students", url: "Students", icon: PiUsersThree  },
+    { name: "Exams", url: "Exams", icon: TbClipboardText },
+    { name: "Quizzes", url: "Quizzes", icon: BsQuestionSquare },
+    { name: "Results", url: "Results", icon: AiOutlineFileText },
+    { name: "Students", url: "Students", icon: PiUsersThree },
   ]
 };
 
 // cards data
-    export const cards = [
-      {
-        number: "2,847",
-        title: "Total Passed students",
-        icon: FiUserCheck ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "434",
-        title: "Total Failed Students",
-        icon: LuUserX ,
-        color: "bg-[#EB1A1A]"
-      },
-      {
-        number: "87%",
-        title: "Pass Rate Progress",
-        icon: FaArrowTrendUp ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "13%",
-        title: "Fail Rate Comparison",
-        icon: FaArrowTrendDown ,
-        color: "bg-[#EB1A1A]"
-      }
-    ];
+export const cards = [
+  {
+    number: "2,847",
+    title: "Total Passed students",
+    icon: FiUserCheck,
+    color: "bg-[#22C55E]"
+  },
+  {
+    number: "434",
+    title: "Total Failed Students",
+    icon: LuUserX,
+    color: "bg-[#EB1A1A]"
+  },
+  {
+    number: "87%",
+    title: "Pass Rate Progress",
+    icon: FaArrowTrendUp,
+    color: "bg-[#22C55E]"
+  },
+  {
+    number: "13%",
+    title: "Fail Rate Comparison",
+    icon: FaArrowTrendDown,
+    color: "bg-[#EB1A1A]"
+  }
+];
 
-    // cards data for instructer
-    export const cardsInstructerData = [
-      {
-        number: "12",
-        title: "Total Courses",
-        icon: PiGraduationCapThin  ,
-        color: "bg-[#5B4CE6]"
-      },
-      {
-        number: "250",
-        title: "Total Students",
-        icon: PiStudentLight  ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "3",
-        title: "Active Exams",
-        icon: TbClipboardText  ,
-        color: "bg-[#F59E0B]"
-      },
-      {
-        number: "5",
-        title: "Active Quizzes",
-        icon: BsQuestionSquare  ,
-        color: "bg-[#EB1A1A]"
-      }
-    ];
-    
+// cards data for instructer
+export const cardsInstructerData = [
+  {
+    number: "12",
+    title: "Total Courses",
+    icon: PiGraduationCapThin,
+    color: "bg-[#5B4CE6]"
+  },
+  {
+    number: "250",
+    title: "Total Students",
+    icon: PiStudentLight,
+    color: "bg-[#22C55E]"
+  },
+  {
+    number: "3",
+    title: "Active Exams",
+    icon: TbClipboardText,
+    color: "bg-[#F59E0B]"
+  },
+  {
+    number: "5",
+    title: "Active Quizzes",
+    icon: BsQuestionSquare,
+    color: "bg-[#EB1A1A]"
+  }
+];
+
 // recentActivity data
-    export const recentActivity = [
-      {
-        title1: "New quiz created",
-        title2: "Mathematics Level 2",
-        icon: PiClipboardText,
-        borderColor:"border-[#EF4444]",
-        bgColor:'bg-[#FEF2F2]',
-        color: "text-[#EB1A1A]",
-        date: "5 minutes ago"
-      },
-      {
-        title1: "Results published",
-        title2: "Physics Level 3",
-        icon: FaRegCheckCircle,
-        borderColor:"border-[#22C55E]",
-        bgColor:'bg-[#F0FDF4]',
-        color: "text-[#10B981]",
-        date: "23 minutes ago"
-      },
-      {
-        title1: "New student enrolled",
-        title2: "Chemistry Level 1",
-        icon: LuUserPlus,
-        borderColor:"border-[#F59E0B]",
-        bgColor:'bg-[#FEFCE8]',
-        color: "text-[#F59E0B]",
-        date: "1 hour ago"
-      },
-      {
-        title1: "Lesson updated",
-        title2: "Biology Level 2",
-        icon: PiFileText,
-        borderColor:"border-[#0E2D6B]",
-        bgColor:'bg-[#EFF1F5]',
-        color: "text-[#000]",
-        date: "2 hours ago"
-      },
-    ]
+export const recentActivity = [
+  {
+    title1: "New quiz created",
+    title2: "Mathematics Level 2",
+    icon: PiClipboardText,
+    borderColor: "border-[#EF4444]",
+    bgColor: 'bg-[#FEF2F2]',
+    color: "text-[#EB1A1A]",
+    date: "5 minutes ago"
+  },
+  {
+    title1: "Results published",
+    title2: "Physics Level 3",
+    icon: FaRegCheckCircle,
+    borderColor: "border-[#22C55E]",
+    bgColor: 'bg-[#F0FDF4]',
+    color: "text-[#10B981]",
+    date: "23 minutes ago"
+  },
+  {
+    title1: "New student enrolled",
+    title2: "Chemistry Level 1",
+    icon: LuUserPlus,
+    borderColor: "border-[#F59E0B]",
+    bgColor: 'bg-[#FEFCE8]',
+    color: "text-[#F59E0B]",
+    date: "1 hour ago"
+  },
+  {
+    title1: "Lesson updated",
+    title2: "Biology Level 2",
+    icon: PiFileText,
+    borderColor: "border-[#0E2D6B]",
+    bgColor: 'bg-[#EFF1F5]',
+    color: "text-[#000]",
+    date: "2 hours ago"
+  },
+]
 
 // Course Completion Card
 export const CoursesInstructerData = [
@@ -508,3 +508,14 @@ export const CoursesInstructerData = [
   { name: "Biology Lab", students: 41, percent: 91 },
 ];
 
+// ExamInstucter Input
+
+export const ExamInstucterInput = [
+  { id: 1, label: "Exam Title", name: "examTitle", placeholder: "e.g. Midterm Mathematics", type: "text" },
+  { id: 2, label: "Select Course", name: "course", placeholder: "Choose a course", type: "select", options: ["Math", "Physics", "Science"] },
+  { id: 3, label: "Education Stage", name: "stage", placeholder: "Year 3", type: "select", options: ["Primary", "Secondary"] },
+  { id: 4, label: "Education Level", name: "level", placeholder: "Undergraduate", type: "select", options: ["Graduated"] },
+  { id: 5, label: "Duration (minutes)", name: "duration", type: "range" },
+  { id: 6, label: "Start Date & Time", type: "date", dateName: "startDate", timeName: "startTime" },
+  { id: 7, label: "End Date & Time", type: "date", dateName: "endDate", timeName: "endTime" },
+];

@@ -20,3 +20,17 @@ export const courseSchema = z
     message: "Course cover is required",
     path: ["coverImage"],
   });
+
+//examSchema
+
+export const examSchema = z.object({
+  examTitle: z.string().trim().min(1, "Exam title is required"),
+  course: z.string().min(1, "Please select a course"),
+  stage: z.string().min(1, "Please select education stage"),
+  level: z.string().min(1, "Please select education level"),
+  duration: z.coerce.number().min(1, "Duration is required"),
+  startDate: z.string().min(1, "Start date is required"),
+  startTime: z.string().min(1, "Start time is required"),
+  endDate: z.string().min(1, "End date is required"),
+  endTime: z.string().min(1, "End time is required"),
+});
