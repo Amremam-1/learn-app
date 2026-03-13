@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { quizSchema } from "../../utils/validation/quizSchema"
 import Input from "../../components/Ui/Input"
 import Select from "../../components/Ui/Select"
@@ -10,8 +10,8 @@ const QuizForm = ({ onNext, defaultValues }) => {
   const {
     register,
     handleSubmit,
-    setValue,
     reset,
+    control,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(quizSchema),
@@ -45,19 +45,24 @@ const QuizForm = ({ onNext, defaultValues }) => {
       <div>
         <label className="block text-sm font-medium mb-2">Select Course</label>
 
-        <Select
-          placeholder="Choose a course..."
-          options={[
-            "Introduction to Computer Science",
-            "Data Structures and Algorithms",
-            "Web Development Basics",
-            "Database Systems",
-            "Software Engineering Principles",
-          ]}
-          className="bg-slate-100 border-slate-300"
-          onChange={(value) =>
-            setValue("course", value, { shouldValidate: true })
-          }
+        <Controller
+          name="course"
+          control={control}
+          render={({ field }) => (
+            <Select
+              placeholder="Choose a course..."
+              options={[
+                "Introduction to Computer Science",
+                "Data Structures and Algorithms",
+                "Web Development Basics",
+                "Database Systems",
+                "Software Engineering Principles",
+              ]}
+              className="bg-slate-100 border-slate-300"
+              value={field.value}
+              onChange={field.onChange}
+            />
+          )}
         />
         {errors.course && (
           <p className="text-red-500 text-sm mt-1">{errors.course.message}</p>
