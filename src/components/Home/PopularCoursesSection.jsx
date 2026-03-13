@@ -14,7 +14,7 @@ import Button from "../Ui/Button"
 
 const PopularCoursesSection = () => {
   return (
-    <div id="courses" className="py-20 bg-white px-2 sm:px-6 lg:px-8">
+    <div className="py-20 bg-white px-2 sm:px-6 lg:px-8">
       <TitleSection
         className="text-start"
         label="Explore Programs"
@@ -43,13 +43,12 @@ const PopularCoursesSection = () => {
             },
           }}
           modules={[Navigation, Pagination]}
-          className="mySwiper"
         >
           {coursesData.map((course) => (
-            <SwiperSlide key={course.id}>
+            <SwiperSlide key={course.title}>
               <div className="bg-[#F6F6F8] rounded-2xl border border-borderCard overflow-hidden">
                 <div className="h-[150px]">
-                  <img src="" alt="" />
+                  {/* <img src="" alt="" /> */}
                 </div>
 
                 {/* Details courses */}
@@ -74,7 +73,7 @@ const PopularCoursesSection = () => {
                   {/* Person  */}
                   <div className="flex items-center gap-2">
                     <div className="w-[32px] h-[32px] bg-white rounded-full shadow">
-                      <img src="" alt="" />
+                      {/* <img src="/" alt={course.title} /> */}
                     </div>
                     <p className="text-textMuted">{course.instructor}</p>
                   </div>

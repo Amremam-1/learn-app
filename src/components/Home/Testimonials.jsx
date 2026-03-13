@@ -34,7 +34,7 @@ const Testimonials = () => {
 
             <div className="flex items-center gap-2">
               <div className="w-[32px] h-[32px] bg-white rounded-full shadow">
-                <img src="" alt="" />
+                {/* <img src="" alt="" /> */}
               </div>
               <div>
                 <p className="font-medium">{testimonial.name}</p>

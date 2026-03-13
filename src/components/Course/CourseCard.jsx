@@ -2,6 +2,7 @@ import React from "react";
 
 import { MdOutlineLayers } from "react-icons/md";
 import { IoPeopleOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function CourseCard({ course }) {
   return (
@@ -81,12 +82,12 @@ export default function CourseCard({ course }) {
           </div>
 
           <div>
-            <a
-              href="#"
+            <Link 
+              to={`${course.id}/CoursesInstructer`}
               className="text-primary font-bold text-[12px] leading-[20px] mt-2 hover:underline"
             >
               {course.analytics ? "View Analytics" : "Edit Draft"}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
