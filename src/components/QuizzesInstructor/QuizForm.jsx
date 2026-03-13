@@ -6,7 +6,7 @@ import Select from "../../components/Ui/Select"
 import Button from "../../components/Ui/Button"
 import { FaRegCircleQuestion } from "react-icons/fa6"
 
-const QuizForm = ({ onNext }) => {
+const QuizForm = ({ onNext, defaultValues }) => {
   const {
     register,
     handleSubmit,
@@ -15,6 +15,12 @@ const QuizForm = ({ onNext }) => {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(quizSchema),
+    defaultValues: defaultValues || {
+      title: "",
+      course: "",
+      topic: "",
+      questions: "",
+    },
   })
 
   const onSubmit = (data) => {

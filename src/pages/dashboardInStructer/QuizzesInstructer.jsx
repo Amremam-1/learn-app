@@ -14,7 +14,10 @@ const QuizzesInstructer = () => {
   return (
     <div className="flex flex-col p-6 gap-8">
       <h1 className="flex gap-4 items-center text-xl font-semibold">
-        <FaArrowLeft className="text-zinc-700 hover:text-zinc-600 cursor-pointer hover:transition-colors" />
+        <FaArrowLeft
+          className="text-zinc-700 hover:text-zinc-600 cursor-pointer hover:transition-colors"
+          onClick={() => setSteps(1)}
+        />
         Create New Quiz
       </h1>
 
@@ -42,7 +45,7 @@ const QuizzesInstructer = () => {
         Let's start with the essentials. Provide the core details for your new
         assessment.
       </p>
-      {steps === 1 && <QuizForm onNext={handleNext} />}
+      {steps === 1 && <QuizForm onNext={handleNext} defaultValues={quizData} />}
       {steps === 2 && <CreateQuizStep2 data={quizData} />}
     </div>
   )
