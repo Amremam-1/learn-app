@@ -16,6 +16,7 @@ import Courses from "../pages/dashboardAdmin/Courses"
 import ContactUs from "../pages/dashboardAdmin/ContactUs"
 import CreateCourse from "../pages/dashboardAdmin/CreateCourse"
 import CreateLiveSession from "../pages/dashboardAdmin/CreateLiveSession"
+import CreateCourseInstructer from "../pages/dashboardInstructer/CreateCourseInstructer"
 
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import Profile from "../pages/Student/Profile"
@@ -69,7 +70,6 @@ export const router = createBrowserRouter([
       { index: true, element: <Admin /> },
       { path: "users", element: <Users /> },
       { path: "courses", element: <Courses /> },
-      { path: "courses/new", element: <CreateCourse /> },
       { path: "stages", element: <Stages /> },
       { path: "courses", element: <Courses /> },
       { path: "payment", element: <Payment /> },
@@ -102,6 +102,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Instructer /> },
       { path: "Courses", element: <CoursesInstructer /> },
+      { path: "courses/new", element: <CreateCourseInstructer /> },
       { path: "LiveSessions", element: <LiveSessionsInstructer /> },
       { path: "Exams", element: <ExamsInstructer /> },
       { path: "Quizzes", element: <QuizzesInstructer /> },
