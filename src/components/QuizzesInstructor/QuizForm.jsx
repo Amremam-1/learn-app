@@ -98,7 +98,14 @@ const QuizForm = ({ onNext, defaultValues }) => {
 
       <div className="flex items-center justify-between">
         <Button
-          onClick={() => reset()}
+          onClick={() => {
+            reset({
+              title: "",
+              course: "",
+              topic: "",
+              questions: "",
+            })
+          }}
           variant="secondary"
           className="px-8"
           type="button"

@@ -11,6 +11,7 @@ const QuizzesInstructer = () => {
     setQuizData(data)
     setSteps(2)
   }
+
   return (
     <div className="flex flex-col p-6 gap-8">
       <h1 className="flex gap-4 items-center text-xl font-semibold">

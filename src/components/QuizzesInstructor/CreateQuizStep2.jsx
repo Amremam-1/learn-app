@@ -20,6 +20,7 @@ export default function CreateQuizStep2({ data }) {
 
     console.log(finalQuiz)
   }
+
   return (
     <div className="p-5">
       <h2 className="text-xl font-semibold">{data?.title}</h2>
