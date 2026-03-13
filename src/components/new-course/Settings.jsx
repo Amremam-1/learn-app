@@ -1,5 +1,5 @@
 import ToggleSwitch from "../Ui/ToggleSwitch";
-import Select from "../Ui/Select";
+import FormSelect from "../Ui/FormSelect";
 import { courseLanguages } from "../../data/mockData";
 
 export default function Settings({ courseData, handleChange }) {
@@ -32,7 +32,7 @@ export default function Settings({ courseData, handleChange }) {
           Language
         </p>
 
-        <Select
+        <FormSelect
           options={courseLanguages}
           value={courseData.language}
           onChange={(v) => handleChange("language", v)}

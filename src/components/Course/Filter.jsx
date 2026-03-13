@@ -1,5 +1,5 @@
 import React from "react";
-import Select from "../Ui/Select";
+import FormSelect from "../Ui/FormSelect";
 import { courseStages, courseSubjects } from "../../data/mockData";
 
 export default function Filter({ courseData, setCourseData }) {
@@ -8,11 +8,11 @@ export default function Filter({ courseData, setCourseData }) {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 w-full p-4 sm:p-4">
+    <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 w-full sm:w-auto min-w-0 pl-4 pr-3">
       {/* Stage */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:w-auto">
         <p className="font-medium text-textMuted text-[14px]">Stage:</p>
-        <Select
+        <FormSelect
           options={courseStages}
           value={courseData.stage}
           onChange={(val) => handleChange("stage", val)}
@@ -24,7 +24,7 @@ export default function Filter({ courseData, setCourseData }) {
       {/* Subject */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full sm:w-auto">
         <p className="font-medium text-textMuted text-[14px]">Subject:</p>
-        <Select
+        <FormSelect
           options={courseSubjects}
           value={courseData.subject}
           onChange={(val) => handleChange("subject", val)}

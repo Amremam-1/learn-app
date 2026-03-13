@@ -85,7 +85,7 @@ export default function CourseCard({ course }) {
               href="#"
               className="text-primary font-bold text-[12px] leading-[20px] mt-2 hover:underline"
             >
-              {course.analytics ? "View Analytics" : "Edit Draft"}
+              View Analytics
             </a>
           </div>
         </div>

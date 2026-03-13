@@ -1,6 +1,6 @@
 import { FaMoneyBills } from "react-icons/fa6";
 import { FaDollarSign } from "react-icons/fa";
-import Input from "../Ui/Input";
+import FormInput from "../Ui/FormInput";
 import ToggleSwitch from "../Ui/ToggleSwitch";
 
 export default function PricingAccess({ courseData, handleChange, errors }) {
@@ -24,7 +24,7 @@ export default function PricingAccess({ courseData, handleChange, errors }) {
 
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="w-full">
-              <Input
+              <FormInput
                 type="number"
                 value={courseData.isFree ? "" : courseData.price} // Clear value visually if free
                 onChange={(e) => handleChange("price", e.target.value)}
@@ -32,14 +32,8 @@ export default function PricingAccess({ courseData, handleChange, errors }) {
                 icon={<FaDollarSign />}
                 disabled={courseData.isFree} // Disable input if free
                 className={courseData.isFree ? "bg-gray-50" : ""}
+                error={showPriceError ? errors.price : undefined}
               />
-
-              {/* Error only shows if NOT free */}
-              {showPriceError && (
-                <span className="text-red-500 text-xs mt-1 block font-medium">
-                  {errors.price}
-                </span>
-              )}
 
               <p className="pt-2 text-textMuted text-[12px]">
                 Suggested price: $49.99 - $129.99 based on <br /> subject area.

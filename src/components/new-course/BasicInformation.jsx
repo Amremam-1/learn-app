@@ -1,6 +1,6 @@
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import Input from "../Ui/Input";
-import Select from "../Ui/Select";
+import FormInput from "../Ui/FormInput";
+import FormSelect from "../Ui/FormSelect";
 import TextEditor from "../Ui/TextEditor";
 
 import { courseStages, courseSubjects } from "../../data/mockData";
@@ -21,15 +21,13 @@ export default function BasicInformation({ courseData, handleChange, errors }) {
           <p className="font-semibold text-grayLabel text-[14px]">
             Course Title
           </p>
-          <Input
+          <FormInput
             type="text"
             value={courseData.title}
             onChange={(e) => handleChange("title", e.target.value)}
             placeholder="e.g. Advanced Mathematics"
+            error={errors.title}
           />
-          {errors.title && (
-            <span className="text-red-500 text-xs mt-1">{errors.title}</span>
-          )}
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
@@ -38,31 +36,25 @@ export default function BasicInformation({ courseData, handleChange, errors }) {
             <p className="font-semibold text-grayLabel text-[14px]">
               Educational Stage
             </p>
-            <Select
+            <FormSelect
               options={courseStages}
               value={courseData.stage}
               onChange={(val) => handleChange("stage", val)}
               placeholder="Select Stage"
-              error={!!errors.stage}
+              error={errors.stage}
             />
-            {errors.stage && (
-              <span className="text-red-500 text-xs mt-1">{errors.stage}</span>
-            )}
           </div>
 
           {/* Subject */}
           <div className="flex flex-col gap-2 w-full pb-[24px]">
             <p className="font-semibold text-grayLabel text-[14px]">Subject</p>
-            <Select
+            <FormSelect
               options={courseSubjects}
               value={courseData.subject}
               onChange={(val) => handleChange("subject", val)}
               placeholder="Select Subject"
-              error={!!errors.subject}
+              error={errors.subject}
             />
-            {errors.subject && (
-              <span className="text-danger text-xs mt-1">{errors.subject}</span>
-            )}
           </div>
         </div>
 
