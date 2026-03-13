@@ -14,7 +14,7 @@ import Button from "../Ui/Button"
 
 const PopularCoursesSection = () => {
   return (
-    <div id="courses" className="py-20 bg-white px-2 sm:px-6 lg:px-8">
+    <div className="py-20 bg-white px-2 sm:px-6 lg:px-8">
       <TitleSection
         className="text-start"
         label="Explore Programs"

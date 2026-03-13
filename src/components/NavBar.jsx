@@ -43,8 +43,12 @@ const NavBar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex items-center gap-2.5">
-          <Button variant="secondary">Login</Button>
-          <Button>Join for Free</Button>
+          <Link to="/login">
+            <Button variant="secondary">Login</Button>
+          </Link>
+          <Link to="/register">
+            <Button>Sign Up</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,7 +81,7 @@ const NavBar = () => {
 
           <div className="flex gap-3 p-4 flex-col">
             <Button variant="secondary">Login</Button>
-            <Button>Join for Free</Button>
+            <Button>Sign up</Button>
           </div>
         </div>
       )}
