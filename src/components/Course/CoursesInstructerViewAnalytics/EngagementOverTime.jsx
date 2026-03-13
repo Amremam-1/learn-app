@@ -1,19 +1,10 @@
-
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  ResponsiveContainer,
-  Tooltip
-} from "recharts";
+import { AreaChart, Area, XAxis, ResponsiveContainer, Tooltip } from "recharts"
 // data
-import {EngagementOverTimeFromInstructor} from '../../data/mockData';
+import { EngagementOverTimeFromInstructor } from "../../../data/mockData"
 
 export default function EngagementOverTime() {
-
   return (
     <div className="bg-white rounded-xl p-4 border border-[#E5E7EB]">
-      
       <p className="text-[#0A0A0A] mb-4">Engagement over Time</p>
 
       <div className="w-full h-48">
@@ -38,7 +29,6 @@ export default function EngagementOverTime() {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-
     </div>
-  );
+  )
 }

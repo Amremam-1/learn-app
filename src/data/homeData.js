@@ -98,14 +98,14 @@ export const coursesData = [
     reviews: "5.2k",
   },
   {
-    id: 4,
-    title: "Data Science Bootcamp",
-    instructor: "Dr. Elena Rossi",
-    instructorImage: "/images/instructor4.png",
-    price: "$129.99",
+    id: 5,
+    title: "AI cloud",
+    instructor: "Dr. Emam",
+    instructorImage: "/images/instructor6.png",
+    price: "$109.99",
     modules: 15,
-    rating: 4.9,
-    reviews: "5.2k",
+    rating: 2,
+    reviews: "3.2k",
   },
 ]
 

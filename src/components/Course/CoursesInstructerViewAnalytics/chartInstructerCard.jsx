@@ -1,5 +1,5 @@
 import { BarChart, Bar, ResponsiveContainer, Cell } from "recharts";
-import { dataCardsCoursesInstructer } from "../../data/mockData";
+import { dataCardsCoursesInstructer } from "../../../data/mockData";
 
 export default function EngagementChart() {
   

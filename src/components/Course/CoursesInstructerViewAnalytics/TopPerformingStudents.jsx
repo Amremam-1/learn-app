@@ -1,5 +1,5 @@
 
-import {TopPerformingStudentsFromInstructor} from '../../data/mockData';
+import {TopPerformingStudentsFromInstructor} from '../../../data/mockData';
 
 export default function TopPerformingStudents() {
   return (

@@ -1,31 +1,15 @@
 import {
   FaBook,
   FaChalkboardTeacher,
-  FaChartBar,
   FaChartLine,
-  FaGraduationCap,
   FaRegCheckCircle,
   FaTachometerAlt,
   FaUser,
-  FaUserFriends,
 } from "react-icons/fa"
 import { LuNotepadText, LuUserPlus } from "react-icons/lu"
-import { MdDashboard, MdMailOutline, MdOutlineWorkspacePremium, MdPayment } from "react-icons/md"
-import { FiUserCheck } from "react-icons/fi";
-import { LuUserX } from "react-icons/lu";
-import { FaArrowTrendDown, FaArrowTrendUp } from 'react-icons/fa6';
-import { PiClipboardText, PiFileText, PiGraduationCapThin, PiStudentLight, PiUsersThree } from "react-icons/pi";
-import { IoBookOutline } from "react-icons/io5";
-import { AiOutlineFileText } from "react-icons/ai";
-import { BsQuestionSquare } from "react-icons/bs";
-import { TbClipboardText } from "react-icons/tb";
+import { MdDashboard, MdOutlineWorkspacePremium } from "react-icons/md"
 
-
-
-import { MdDashboard, MdMailOutline, MdPayment } from "react-icons/md"
-import { FiUserCheck } from "react-icons/fi"
-import { LuUserX } from "react-icons/lu"
-import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6"
+import { FaArrowTrendUp } from "react-icons/fa6"
 import {
   PiClipboardText,
   PiFileText,
@@ -33,6 +17,11 @@ import {
   PiStudentLight,
   PiUsersThree,
 } from "react-icons/pi"
+
+import { FiUserCheck } from "react-icons/fi"
+import { LuUserX } from "react-icons/lu"
+import { FaArrowTrendDown } from "react-icons/fa6"
+
 import { IoBookOutline } from "react-icons/io5"
 import { AiOutlineFileText } from "react-icons/ai"
 import { BsQuestionSquare } from "react-icons/bs"
@@ -434,87 +423,59 @@ export const menuConfig = {
 }
 
 // cards data
-    export const cards = [
-      {
-        number: "2,847",
-        title: "Total Passed students",
-        icon: FiUserCheck ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "434",
-        title: "Total Failed Students",
-        icon: LuUserX ,
-        color: "bg-[#EB1A1A]"
-      },
-      {
-        number: "87%",
-        title: "Pass Rate Progress",
-        icon: FaArrowTrendUp ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "13%",
-        title: "Fail Rate Comparison",
-        icon: FaArrowTrendDown ,
-        color: "bg-[#EB1A1A]"
-      }
-    ];
-
-    // cards data for instructer
-    export const cardsInstructerData = [
-      {
-        number: "12",
-        title: "Total Courses",
-        icon: PiGraduationCapThin  ,
-        color: "bg-[#5B4CE6]"
-      },
-      {
-        number: "250",
-        title: "Total Students",
-        icon: PiStudentLight  ,
-        color: "bg-[#22C55E]"
-      },
-      {
-        number: "3",
-        title: "Active Exams",
-        icon: TbClipboardText  ,
-        color: "bg-[#F59E0B]"
-      },
-      {
-        number: "5",
-        title: "Active Quizzes",
-        icon: BsQuestionSquare  ,
-        color: "bg-[#EB1A1A]"
-      }
-    ];
+export const cardsData = [
+  {
+    number: "2,847",
+    title: "Total Passed students",
+    icon: FiUserCheck,
+    color: "bg-[#22C55E]",
+  },
+  {
+    number: "434",
+    title: "Total Failed Students",
+    icon: LuUserX,
+    color: "bg-[#EB1A1A]",
+  },
+  {
+    number: "87%",
+    title: "Pass Rate Progress",
+    icon: FaArrowTrendUp,
+    color: "bg-[#22C55E]",
+  },
+  {
+    number: "13%",
+    title: "Fail Rate Comparison",
+    icon: FaArrowTrendDown,
+    color: "bg-[#EB1A1A]",
+  },
+]
 
 // cards data for instructor
-  export const cardsDataInstructor = [
-    {
-      title: "Avg. Grade",
-      percentChange: "+2.1%",
-      percentChangeColor: "text-[#16A34A]",
-      percentChangeBgColor: "bg-[#DCFCE7]",
-      value: 84,
-      barColor: "bg-[#F1A628]",
-    },
-    {
-      title: "Completion",
-      percentChange: "-0.5%",
-      percentChangeColor: "text-[#EC5B13]",
-      percentChangeBgColor: "bg-[#FFEDD5]",
-      value: 92,
-      barColor: "bg-[#4A3ADF]",
-    },
-    {
-      title: "Engagement",
-      percentChange: "Weekly Avg",
-      value: 8.8,
-      barColor: "bg-[#E66666]",
-    },
-  ]
-    
+export const cardsDataInstructor = [
+  {
+    title: "Avg. Grade",
+    percentChange: "+2.1%",
+    percentChangeColor: "text-[#16A34A]",
+    percentChangeBgColor: "bg-[#DCFCE7]",
+    value: 84,
+    barColor: "bg-[#F1A628]",
+  },
+  {
+    title: "Completion",
+    percentChange: "-0.5%",
+    percentChangeColor: "text-[#EC5B13]",
+    percentChangeBgColor: "bg-[#FFEDD5]",
+    value: 92,
+    barColor: "bg-[#4A3ADF]",
+  },
+  {
+    title: "Engagement",
+    percentChange: "Weekly Avg",
+    value: 8.8,
+    barColor: "bg-[#E66666]",
+  },
+]
+
 export const cards = [
   {
     number: "2,847",
@@ -616,19 +577,19 @@ export const CoursesInstructerData = [
   { name: "Physics 101", students: 52, percent: 72 },
   { name: "Chemistry Basics", students: 38, percent: 64 },
   { name: "Biology Lab", students: 41, percent: 91 },
-];
+]
 
 // data cards for courses instructer
 export const dataCardsCoursesInstructer = [
-    { value: 1 },
-    { value: 2 },
-    { value: 5 },
-    { value: 1 },
-    { value: 2 },
-  ];
+  { value: 1 },
+  { value: 2 },
+  { value: 5 },
+  { value: 1 },
+  { value: 2 },
+]
 
 // Top Performing Students From Instructor
-  export const TopPerformingStudentsFromInstructor = [
+export const TopPerformingStudentsFromInstructor = [
   {
     id: 1,
     color: "text-[#EC5B13]",
@@ -672,21 +633,11 @@ export const NeedsAttentionFromInstructor = [
 // Engagement Over Time From Instructor
 
 export const EngagementOverTimeFromInstructor = [
-    { day: "Mon", value: 40 },
-    { day: "Tue", value: 60 },
-    { day: "Wed", value: 50 },
-    { day: "Thu", value: 40 },
-    { day: "Fri", value: 75 },
-    { day: "Sat", value: 35 },
-    { day: "Sun", value: 70 },
-  ];
-
-
-// export const engagementBars = [
-//   { active: false },
-//   { active: false },
-//   { active: true },
-//   { active: false },
-//   { active: false },
-// ];
+  { day: "Mon", value: 40 },
+  { day: "Tue", value: 60 },
+  { day: "Wed", value: 50 },
+  { day: "Thu", value: 40 },
+  { day: "Fri", value: 75 },
+  { day: "Sat", value: 35 },
+  { day: "Sun", value: 70 },
 ]

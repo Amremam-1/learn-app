@@ -1,5 +1,5 @@
 
-import {cardsDataInstructor} from "../../data/mockData"
+import {cardsDataInstructor} from "../../../data/mockData"
 import EngagementCard from "./chartInstructerCard"
 
 export default function CardsCoursesInstructer() {
