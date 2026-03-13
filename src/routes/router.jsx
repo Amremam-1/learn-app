@@ -12,7 +12,7 @@ import Stages from "../pages/dashboardAdmin/Stages"
 import Payment from "../pages/dashboardAdmin/Payment"
 import Results from "../pages/dashboardAdmin/Results"
 import Settings from "../pages/dashboardAdmin/Settings"
-import Courses from "../pages/dashboardAdmin/Courses"
+import Courses from "../pages/dashboardInStructer/Courses"
 import ContactUs from "../pages/dashboardAdmin/ContactUs"
 import CreateCourse from "../pages/dashboardAdmin/CreateCourse"
 
@@ -25,7 +25,7 @@ import ResultsManagement from "../pages/Student/ResultsManagement"
 import InsightAnalysis from "../pages/Student/InsightAnalysis"
 
 import DashboardLayoutInstructer from "../layout/DashboardLayoutInstructer"
-import CoursesInstructer from "../pages/dashboardInstructer/CoursesInstructer"
+import CoursesInstructer from "../pages/dashboardInStructer/CoursesInstructer"
 import LiveSessionsInstructer from "../pages/dashboardInstructer/LiveSessionsInstructer"
 import ExamsInstructer from "../pages/dashboardInstructer/ExamsInstructer"
 import QuizzesInstructer from "../pages/dashboardInstructer/QuizzesInstructer"
@@ -34,6 +34,7 @@ import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
 
 import NotFound from "../components/NotFound"
 import Instructer from "../pages/dashboardInStructer/Instructer"
+import CoursesAdmin from "../pages/dashboardAdmin/CoursesAdmin"
 
 export const router = createBrowserRouter([
   {
@@ -66,7 +67,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Admin /> },
       { path: "users", element: <Users /> },
-      { path: "courses", element: <Courses /> },
+      { path: "courses", element: <CoursesAdmin /> },
       { path: "courses/new", element: <CreateCourse /> },
       { path: "stages", element: <Stages /> },
       { path: "courses", element: <Courses /> },
@@ -98,7 +99,9 @@ export const router = createBrowserRouter([
     element: <DashboardLayoutInstructer />,
     children: [
       { index: true, element: <Instructer /> },
-      { path: "Courses", element: <CoursesInstructer /> },
+      // { path: "Courses", element: <CoursesInstructer /> },
+      { path: "Courses", element: <Courses /> },
+      { path: "Courses/:courseId/CoursesInstructer", element: <CoursesInstructer /> },
       { path: "LiveSessions", element: <LiveSessionsInstructer /> },
       { path: "Exams", element: <ExamsInstructer /> },
       { path: "Quizzes", element: <QuizzesInstructer /> },

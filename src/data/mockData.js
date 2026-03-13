@@ -1,6 +1,6 @@
 import { FaBook, FaChalkboardTeacher, FaChartBar, FaChartLine, FaGraduationCap, FaRegCheckCircle, FaTachometerAlt, FaUser, FaUserFriends } from "react-icons/fa"
 import { LuNotepadText, LuUserPlus } from "react-icons/lu"
-import { MdDashboard, MdMailOutline, MdPayment } from "react-icons/md"
+import { MdDashboard, MdMailOutline, MdOutlineWorkspacePremium, MdPayment } from "react-icons/md"
 import { FiUserCheck } from "react-icons/fi";
 import { LuUserX } from "react-icons/lu";
 import { FaArrowTrendDown, FaArrowTrendUp } from 'react-icons/fa6';
@@ -459,6 +459,32 @@ export const menuConfig = {
         color: "bg-[#EB1A1A]"
       }
     ];
+
+// cards data for instructor
+  export const cardsDataInstructor = [
+    {
+      title: "Avg. Grade",
+      percentChange: "+2.1%",
+      percentChangeColor: "text-[#16A34A]",
+      percentChangeBgColor: "bg-[#DCFCE7]",
+      value: 84,
+      barColor: "bg-[#F1A628]",
+    },
+    {
+      title: "Completion",
+      percentChange: "-0.5%",
+      percentChangeColor: "text-[#EC5B13]",
+      percentChangeBgColor: "bg-[#FFEDD5]",
+      value: 92,
+      barColor: "bg-[#4A3ADF]",
+    },
+    {
+      title: "Engagement",
+      percentChange: "Weekly Avg",
+      value: 8.8,
+      barColor: "bg-[#E66666]",
+    },
+  ]
     
 // recentActivity data
     export const recentActivity = [
@@ -508,3 +534,74 @@ export const CoursesInstructerData = [
   { name: "Biology Lab", students: 41, percent: 91 },
 ];
 
+// data cards for courses instructer
+export const dataCardsCoursesInstructer = [
+    { value: 1 },
+    { value: 2 },
+    { value: 5 },
+    { value: 1 },
+    { value: 2 },
+  ];
+
+// Top Performing Students From Instructor
+  export const TopPerformingStudentsFromInstructor = [
+  {
+    id: 1,
+    color: "text-[#EC5B13]",
+    initials: "SJ",
+    name: "Sarah Jenkins",
+    performance: "Performance: 98% • Rank #1",
+    icon: MdOutlineWorkspacePremium,
+  },
+  {
+    id: 2,
+    color: "text-[#475569]",
+    initials: "AM",
+    name: "Alex Martinez",
+    performance: "Performance: 96% • Rank #2",
+    icon: MdOutlineWorkspacePremium,
+  },
+]
+
+// Needs Attention From Instructor
+export const NeedsAttentionFromInstructor = [
+  {
+    id: 1,
+    color: "text-[#DC2626]",
+    colorBg: "bg-[#FEE2E2]",
+    initials: "JD",
+    name: "John Dorsey",
+    performance: "2 missing assignments",
+    colorText: "text-[#DC2626]",
+  },
+  {
+    id: 2,
+    color: "text-[#EC5B13]",
+    colorBg: "bg-[#FFEDD5]",
+    initials: "KL",
+    name: "Kevin Lee",
+    performance: "Low engagement: 4h/wk",
+    colorText: "text-[#64748B]",
+  },
+]
+
+// Engagement Over Time From Instructor
+
+export const EngagementOverTimeFromInstructor = [
+    { day: "Mon", value: 40 },
+    { day: "Tue", value: 60 },
+    { day: "Wed", value: 50 },
+    { day: "Thu", value: 40 },
+    { day: "Fri", value: 75 },
+    { day: "Sat", value: 35 },
+    { day: "Sun", value: 70 },
+  ];
+
+
+// export const engagementBars = [
+//   { active: false },
+//   { active: false },
+//   { active: true },
+//   { active: false },
+//   { active: false },
+// ];
