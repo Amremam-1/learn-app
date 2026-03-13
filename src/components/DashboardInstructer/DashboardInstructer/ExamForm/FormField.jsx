@@ -47,18 +47,26 @@ export default function FormField({ item, register, errors }) {
             )}
 
             {item.type === "range" && (
-                <>
-                    <Input
-                        {...register(item.name)}
-                        className="rounded-xl bg-bgLight border border-borderCard text-sm w-full outline-none"
-                    />
 
-                    {errors[item.name] && (
-                        <span className="text-red-500 text-xs">
-                            {errors[item.name]?.message}
-                        </span>
-                    )}
-                </>
+                <div className="rounded-xl bg-bgLight border border-borderCard p-3">
+                    <div className="w-full flex flex-col">
+                        <Input
+                            type="range"
+                            {...register(item.name)}
+                            min="0"
+                            max="120"
+                            step="1"
+                            className="w-full h-2 bg-bgLight rounded-lg cursor-pointer 
+                       accent-[#6C63FF]"
+                        />
+                    </div>
+                    <div className="flex justify-between mt-2 text-[10px] font-medium">
+                        <span>0 min</span>
+                        <span>60 min</span>
+                        <span>90 min</span>
+                        <span>120 min</span>
+                    </div>
+                </div>
             )}
 
             {(item.type === "date" || item.type === "time") && (

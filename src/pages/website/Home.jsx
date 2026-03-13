@@ -8,7 +8,6 @@ import PopularCoursesSection from "../../components/Home/PopularCoursesSection"
 import Testimonials from "../../components/Home/testimonials"
 import CTASection from "../../components/Home/CTASection"
 import Footer from "../../components/Footer"
-
 const Home = () => {
   return (
     <section className="bg-background">
