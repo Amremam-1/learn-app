@@ -1,4 +1,4 @@
-import { cn } from "../../utils/utils";
+import { cn } from "../../utils/utils"
 
 export default function PageHeader({
   breadcrumbs = [],
@@ -13,7 +13,7 @@ export default function PageHeader({
     >
       <div
         aria-hidden="true"
-        className="absolute -inset-2 rounded-xl border-2 border-brandBlue opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-focus-within:opacity-100 group-hover:translate-y-0 group-focus-within:translate-y-0 pointer-events-none"
+        className="absolute -inset-2 rounded-xl border-2 border-bdColor opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-focus-within:opacity-100 group-hover:translate-y-0 group-focus-within:translate-y-0 pointer-events-none"
       />
       {breadcrumbs.length > 0 && (
         <div className="text-sm text-gray mb-2">
@@ -24,7 +24,7 @@ export default function PageHeader({
                 className={cn(
                   index === breadcrumbs.length - 1
                     ? "font-medium text-grayDark"
-                    : "",
+                    : ""
                 )}
               >
                 {item}
@@ -42,5 +42,5 @@ export default function PageHeader({
         )}
       </h1>
     </div>
-  );
+  )
 }

@@ -1,22 +1,22 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { liveSessionSchema, liveSessionDefaultValues } from "../../validation";
-import FormInput from "../../components/Ui/FormInput";
-import FormSelect from "../../components/Ui/FormSelect";
-import FormTextarea from "../../components/Ui/FormTextarea";
-import ToggleSwitch from "../../components/Ui/ToggleSwitch";
-import InfoCard from "../../components/Ui/InfoCard";
-import PageHeader from "../../components/Ui/PageHeader";
-import HoverCard from "../../components/Ui/HoverCard";
-import Button from "../../components/Ui/Button";
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { liveSessionSchema, liveSessionDefaultValues } from "../../validation"
+import FormInput from "../../components/Ui/FormInput"
+import FormSelect from "../../components/Ui/FormSelect"
+import FormTextarea from "../../components/Ui/FormTextarea"
+import ToggleSwitch from "../../components/Ui/ToggleSwitch"
+import InfoCard from "../../components/Ui/InfoCard"
+import PageHeader from "../../components/Ui/PageHeader"
+import HoverCard from "../../components/Ui/HoverCard"
+import Button from "../../components/Ui/Button"
 import {
   courseOptions,
   durationOptions,
   stageOptions,
   infoCardsData,
-} from "../../data/createLiveSessionData";
+} from "../../data/createLiveSessionData"
 
-export default function CreateLiveSession() {
+export default function CreateLiveSessionInStructer() {
   const {
     register,
     handleSubmit,
@@ -24,16 +24,16 @@ export default function CreateLiveSession() {
   } = useForm({
     resolver: zodResolver(liveSessionSchema),
     defaultValues: liveSessionDefaultValues,
-  });
+  })
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data)
     // call api to create live session with data
-  };
+  }
 
   return (
-    <div className="min-h-screen bg-background p-8 font-sans text-grayDark">
-      <div className="max-w-5xl mx-auto">
+    <div className="text-grayDark">
+      <div className="">
         {/* Header Section */}
         <PageHeader
           breadcrumbs={["Live Sessions", "Create New"]}
@@ -107,7 +107,7 @@ export default function CreateLiveSession() {
                 />
               </div>
 
-              <div className="border-t border-grayBorder pt-6 mt-8 flex justify-end gap-4">
+              <div className="border-t border-bdColor pt-6 mt-8 flex justify-end gap-4">
                 <Button type="button" variant="secondary">
                   Cancel
                 </Button>
@@ -135,5 +135,5 @@ export default function CreateLiveSession() {
         </HoverCard>
       </div>
     </div>
-  );
+  )
 }
