@@ -16,6 +16,8 @@ import Courses from "../pages/dashboardInStructer/Courses"
 import ContactUs from "../pages/dashboardAdmin/ContactUs"
 import CreateCourse from "../pages/dashboardAdmin/CreateCourse"
 
+import AdminSetting from "../pages/dashboardAdmin/AdminSetting"
+
 import DashboardLayoutStudent from "../layout/DashboardLayoutStudent"
 import Profile from "../pages/Student/Profile"
 import DashboardStudent from "../pages/Student/DashboardStudent"
@@ -26,11 +28,16 @@ import InsightAnalysis from "../pages/Student/InsightAnalysis"
 
 import DashboardLayoutInstructer from "../layout/DashboardLayoutInstructer"
 import CoursesInstructer from "../pages/dashboardInStructer/CoursesInstructer"
+import CoursesInstructer from "../pages/dashboardInstructer/CoursesInstructer"
+import CreateCourseInstructer from "../pages/dashboardInstructer/CreateCourseInstructer"
 import LiveSessionsInstructer from "../pages/dashboardInstructer/LiveSessionsInstructer"
+import CreateLiveSessionInStructer from "../pages/dashboardInstructer/CreateLiveSessionInStructer"
 import ExamsInstructer from "../pages/dashboardInstructer/ExamsInstructer"
 import QuizzesInstructer from "../pages/dashboardInstructer/QuizzesInstructer"
 import ResultsInstructer from "../pages/dashboardInstructer/ResultsInstructer"
 import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
+import Instructer from "../pages/dashboardInStructer/Instructer"
+import InstructerSetting from "../pages/dashboardInstructer/InstructerSetting"
 
 import NotFound from "../components/NotFound"
 import Instructer from "../pages/dashboardInStructer/Instructer"
@@ -75,6 +82,7 @@ export const router = createBrowserRouter([
       { path: "results", element: <Results /> },
       { path: "contactUs", element: <ContactUs /> },
       { path: "settings", element: <Settings /> },
+      { path: "settings", element: <AdminSetting /> },
     ],
   },
 
@@ -89,7 +97,6 @@ export const router = createBrowserRouter([
       { path: "CoursesStudent", element: <CoursesStudent /> },
       { path: "ResultsManagement", element: <ResultsManagement /> },
       { path: "InsightAnalysis", element: <InsightAnalysis /> },
-      { path: "settings", element: <Settings /> },
     ],
   },
 
@@ -108,6 +115,15 @@ export const router = createBrowserRouter([
       { path: "Results", element: <ResultsInstructer /> },
       { path: "Students", element: <StudentsInstructer /> },
       { path: "settings", element: <Settings /> },
+      { path: "Courses", element: <CoursesInstructer /> },
+      { path: "courses/new", element: <CreateCourseInstructer /> },
+      { path: "liveSessions", element: <LiveSessionsInstructer /> },
+      { path: "liveSessions/new", element: <CreateLiveSessionInStructer /> },
+      { path: "exams", element: <ExamsInstructer /> },
+      { path: "quizzes", element: <QuizzesInstructer /> },
+      { path: "results", element: <ResultsInstructer /> },
+      { path: "students", element: <StudentsInstructer /> },
+      { path: "settings", element: <InstructerSetting /> },
     ],
   },
 
