@@ -5,24 +5,27 @@ import {
   FaRegCheckCircle,
   FaTachometerAlt,
   FaUser,
-  FaUserFriends,
-} from "react-icons/fa";
-import { LuNotepadText, LuUserPlus } from "react-icons/lu";
-import { MdDashboard, MdMailOutline, MdPayment } from "react-icons/md";
-import { FiUserCheck } from "react-icons/fi";
-import { LuUserX } from "react-icons/lu";
-import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
+} from "react-icons/fa"
+import { LuNotepadText, LuUserPlus } from "react-icons/lu"
+import { MdDashboard } from "react-icons/md"
+import { FiUserCheck } from "react-icons/fi"
+import { LuUserX } from "react-icons/lu"
+import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6"
 import {
   PiClipboardText,
   PiFileText,
   PiGraduationCapThin,
   PiStudentLight,
   PiUsersThree,
-} from "react-icons/pi";
-import { IoBookOutline } from "react-icons/io5";
-import { AiOutlineFileText } from "react-icons/ai";
-import { BsQuestionSquare } from "react-icons/bs";
-import { TbClipboardText } from "react-icons/tb";
+} from "react-icons/pi"
+import { IoBookOutline } from "react-icons/io5"
+import { AiOutlineFileText } from "react-icons/ai"
+import { BsQuestionSquare } from "react-icons/bs"
+import { TbClipboardText } from "react-icons/tb"
+
+import { FaMedal } from "react-icons/fa"
+import { GiTrophy } from "react-icons/gi"
+import { MdEmojiEvents } from "react-icons/md"
 
 export const dashboardStats = [
   {
@@ -49,7 +52,7 @@ export const dashboardStats = [
     value: 5,
     color: "danger",
   },
-];
+]
 
 export const weeklyEngagement = [
   { day: "Mon", value: 60 },
@@ -59,7 +62,7 @@ export const weeklyEngagement = [
   { day: "Fri", value: 70 },
   { day: "Sat", value: 55 },
   { day: "Sun", value: 50 },
-];
+]
 
 export const performanceDistribution = [
   {
@@ -82,7 +85,7 @@ export const performanceDistribution = [
     value: 10,
     color: "#EF4444",
   },
-];
+]
 
 export const courseCompletionRates = [
   {
@@ -101,7 +104,7 @@ export const courseCompletionRates = [
     course: "Biology Lab",
     completion: 91,
   },
-];
+]
 
 export const upcomingSessions = [
   {
@@ -125,7 +128,7 @@ export const upcomingSessions = [
     time: "4 AM",
     status: "in 2 days",
   },
-];
+]
 
 export const recentActivities = [
   {
@@ -149,7 +152,7 @@ export const recentActivities = [
     time: "20 minutes ago",
     color: "#F1A628",
   },
-];
+]
 
 export const profileData = {
   name: "Dr. Sarah Johnson",
@@ -181,7 +184,7 @@ export const profileData = {
       university: "MIT",
     },
   ],
-};
+}
 
 export const dashboardCourses = [
   {
@@ -243,8 +246,8 @@ export const dashboardCourses = [
     units: 10,
     image: "/images/course-5.jpg",
   },
-];
-export const courseStages = ["Grade 9", "Grade 10", "Grade 11", "Grade 12"];
+]
+export const courseStages = ["Grade 9", "Grade 10", "Grade 11", "Grade 12"]
 
 export const courseSubjects = [
   "Mathematics",
@@ -253,14 +256,14 @@ export const courseSubjects = [
   "Biology",
   "Computer Science",
   "History",
-];
+]
 
 export const courseLanguages = [
   "English (US)",
   "English (UK)",
   "Arabic",
   "French",
-];
+]
 
 export const courseFilters = {
   grades: ["All Grades", "Grade 9", "Grade 10", "Grade 11"],
@@ -271,7 +274,7 @@ export const courseFilters = {
     "History",
     "Computer Science",
   ],
-};
+}
 
 export const accountSettingsData = {
   profile: {
@@ -297,7 +300,7 @@ export const accountSettingsData = {
   security: {
     twoFactorAuth: false,
   },
-};
+}
 
 export const liveSessionsData = [
   {
@@ -333,7 +336,7 @@ export const liveSessionsData = [
     students: 210,
     status: "pending",
   },
-];
+]
 
 export const previousSessions = [
   {
@@ -357,7 +360,7 @@ export const previousSessions = [
     streamed: "1 week ago",
     image: "/images/Session Thumbnail3.png",
   },
-];
+]
 
 // charts data
 export const dataCharts = [
@@ -373,7 +376,7 @@ export const dataCharts = [
   { name: "Oct", success: 98, fail: 17 },
   { name: "Nov", success: 94, fail: 20 },
   { name: "Dec", success: 102, fail: 15 },
-];
+]
 
 // charts data instructer
 export const performanceDistributioninstructer = [
@@ -381,7 +384,7 @@ export const performanceDistributioninstructer = [
   { label: "Very Good", value: 35, color: "#3B82F6" },
   { label: "Good", value: 18, color: "#F59E0B" },
   { label: "Needs Improvement", value: 5, color: "#EF4444" },
-];
+]
 
 // admin and student sidebar
 export const menuConfig = {
@@ -417,7 +420,7 @@ export const menuConfig = {
     { name: "Results", url: "results", icon: AiOutlineFileText },
     { name: "Students", url: "students", icon: PiUsersThree },
   ],
-};
+}
 
 // cards data
 export const cardsData = [
@@ -498,7 +501,7 @@ export const cards = [
     icon: FaArrowTrendDown,
     color: "bg-[#EB1A1A]",
   },
-];
+]
 
 // cards data for instructer
 export const cardsInstructerData = [
@@ -526,7 +529,7 @@ export const cardsInstructerData = [
     icon: BsQuestionSquare,
     color: "bg-[#EB1A1A]",
   },
-];
+]
 
 // recentActivity data
 export const recentActivity = [
@@ -566,7 +569,7 @@ export const recentActivity = [
     color: "text-[#000]",
     date: "2 hours ago",
   },
-];
+]
 
 // Course Completion Card
 export const CoursesInstructerData = [
@@ -574,4 +577,69 @@ export const CoursesInstructerData = [
   { name: "Physics 101", students: 52, percent: 72 },
   { name: "Chemistry Basics", students: 38, percent: 64 },
   { name: "Biology Lab", students: 41, percent: 91 },
-];
+]
+
+export const TopPerformingStudentsFromInstructor = [
+  {
+    id: 1,
+    initials: "SJ",
+    name: "Sarah Jenkins",
+    performance: "Performance: 98% • Rank #1",
+    color: "text-orange-500",
+    icon: GiTrophy,
+  },
+  {
+    id: 2,
+    initials: "AM",
+    name: "Alex Martinez",
+    performance: "Performance: 96% • Rank #2",
+    color: "text-blue-500",
+    icon: MdEmojiEvents,
+  },
+  {
+    id: 3,
+    initials: "JD",
+    name: "John Doe",
+    performance: "Performance: 94% • Rank #3",
+    color: "text-green-500",
+    icon: FaMedal,
+  },
+]
+
+export const NeedsAttentionFromInstructor = [
+  {
+    id: 1,
+    initials: "JD",
+    name: "John Dorsey",
+    performance: "2 missing assignments",
+    colorBg: "bg-red-100",
+    color: "text-red-500",
+    colorText: "text-red-500",
+  },
+  {
+    id: 2,
+    initials: "KL",
+    name: "Kevin Lee",
+    performance: "Low engagement: 4h/wk",
+    colorBg: "bg-orange-100",
+    color: "text-orange-500",
+    colorText: "text-[#64748B]",
+  },
+]
+export const EngagementOverTimeFromInstructor = [
+  { day: "Mon", value: 30 },
+  { day: "Tue", value: 45 },
+  { day: "Wed", value: 40 },
+  { day: "Thu", value: 35 },
+  { day: "Fri", value: 55 },
+  { day: "Sat", value: 30 },
+  { day: "Sun", value: 50 },
+]
+
+export const dataCardsCoursesInstructer = [
+  { name: "Mon", value: 3 },
+  { name: "Tue", value: 4 },
+  { name: "Wed", value: 6 }, // دي اللي هتكون باللون الأحمر
+  { name: "Thu", value: 4 },
+  { name: "Fri", value: 5 },
+]
