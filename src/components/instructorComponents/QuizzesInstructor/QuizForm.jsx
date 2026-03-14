@@ -87,10 +87,10 @@ const QuizForm = ({ onNext, defaultValues }) => {
         </label>
         <div className="relative">
           <Input
-            type="number"
+            type="text"
             placeholder="10"
             className="bg-slate-100 border-slate-300"
-            {...register("questions", { valueAsNumber: true })}
+            {...register("questions")}
           />
           <FaRegCircleQuestion className="absolute right-4 top-1/2 -translate-y-1/2 text-indigo-600" />
         </div>
