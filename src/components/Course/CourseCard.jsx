@@ -86,8 +86,8 @@ export default function CourseCard({ course }) {
               to={`${course.id}/CoursesInstructer`}
               className="text-primary font-bold text-[12px] leading-[20px] mt-2 hover:underline"
             >
-              {course.analytics ? "View Analytics" : "Edit Draft"}
-            </Link>
+              View Analytics
+            </a>
           </div>
         </div>
       </div>

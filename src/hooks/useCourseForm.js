@@ -94,7 +94,7 @@ export const useCourseForm = () => {
     setTimeout(() => {
       setIsSaving(false);
       setShowMessage(true);
-      setTimeout(() => navigate("/admin/courses"), 1500);
+      setTimeout(() => navigate("/instructer/Courses"), 1500);
     }, 1000);
   };
 
