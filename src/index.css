@@ -19,10 +19,14 @@ body {
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: var(--swiper-pagination-bottom, -25px) !important;
   top: var(--swiper-pagination-top, auto);
   left: 0;
   width: 100%;
+}
+.table-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #dedfdf #f4f6fb;
 }
