@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { liveSessionSchema, liveSessionDefaultValues } from "../../utils/validation/index"
+import {
+  liveSessionSchema,
+  liveSessionDefaultValues,
+} from "../../utils/validation/index"
 import FormInput from "../../components/Ui/FormInput"
 import FormSelect from "../../components/Ui/FormSelect"
 import FormTextarea from "../../components/Ui/FormTextarea"
@@ -15,6 +18,7 @@ import {
   stageOptions,
   infoCardsData,
 } from "../../data/createLiveSessionData"
+import toast from "react-hot-toast"
 
 export default function CreateLiveSessionInStructer() {
   const {
@@ -29,6 +33,7 @@ export default function CreateLiveSessionInStructer() {
   const onSubmit = (data) => {
     console.log(data)
     // call api to create live session with data
+    toast.success("Live Sessions saved successfully 🎉") // you should add when error should toas.error
   }
 
   return (

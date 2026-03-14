@@ -5,6 +5,7 @@ import Input from "../../Ui/Input"
 import Select from "../../Ui/Select"
 import Button from "../../Ui/Button"
 import { FaRegCircleQuestion } from "react-icons/fa6"
+import toast from "react-hot-toast"
 
 const QuizForm = ({ onNext, defaultValues }) => {
   const {
@@ -25,6 +26,7 @@ const QuizForm = ({ onNext, defaultValues }) => {
 
   const onSubmit = (data) => {
     console.log(data)
+    toast.success("Step 1 saved successfully 🎉")
     onNext(data)
   }
   return (
@@ -110,6 +112,7 @@ const QuizForm = ({ onNext, defaultValues }) => {
               topic: "",
               questions: "",
             })
+            toast.success("Step 1 delete successfully 🎉")
           }}
           variant="secondary"
           className="px-8"

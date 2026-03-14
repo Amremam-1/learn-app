@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import PasswordInput from "../PasswordInput"
 import EmailInput from "../EmailInput"
 import { schameLogin } from "../../../utils/validation/AuthValidation"
+import toast from "react-hot-toast"
 
 const LoginForm = () => {
   const {
@@ -17,6 +18,7 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     console.log(data)
+    toast.success("Login successful")
 
     reset()
   }

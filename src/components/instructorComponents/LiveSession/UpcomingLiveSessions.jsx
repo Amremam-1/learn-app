@@ -1,21 +1,21 @@
 import React, { useState, useCallback } from "react"
 import { IoPersonOutline } from "react-icons/io5"
-import NotificationToast from "./NotificationToast"
 import { FaPen, FaTrash } from "react-icons/fa6"
 import ToggleSwitch from "../../Ui/ToggleSwitch"
 import { liveSessionsData, previousSessions } from "../../../data/mockData"
 import PreviousSessionCard from "./PreviousSessionCard"
 import { IoMdCalendar } from "react-icons/io"
 import { RxCounterClockwiseClock } from "react-icons/rx"
+import toast from "react-hot-toast"
 
 export default function UpcomingLiveSessions() {
   const [showToStudents, setShowToStudents] = useState(true)
-  const [showToast, setShowToast] = useState(false)
 
   const handleToggle = useCallback((e) => {
     const isOn = e.target.checked
     setShowToStudents(isOn)
-    if (isOn) setShowToast(true)
+
+    toast.success("Notifications sent successfully to all enrolled students!")
   }, [])
 
   const thClass =
@@ -151,12 +151,6 @@ export default function UpcomingLiveSessions() {
           <PreviousSessionCard key={session.id} session={session} />
         ))}
       </div>
-
-      <NotificationToast
-        show={showToast}
-        onClose={() => setShowToast(false)}
-        message="Notifications sent successfully to all enrolled students!"
-      />
     </>
   )
 }

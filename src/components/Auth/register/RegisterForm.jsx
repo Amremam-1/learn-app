@@ -5,6 +5,7 @@ import { IoPerson } from "react-icons/io5"
 import PasswordInput from "../PasswordInput"
 import EmailInput from "../EmailInput"
 import { schameSignup } from "../../../utils/validation/AuthValidation"
+import toast from "react-hot-toast"
 
 const RegisterForm = () => {
   const {
@@ -18,7 +19,7 @@ const RegisterForm = () => {
 
   const onSubmit = (data) => {
     console.log(data)
-
+    toast.success("Register successful")
     reset()
   }
 
