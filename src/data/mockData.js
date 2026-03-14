@@ -415,7 +415,9 @@ export const menuConfig = {
     { name: "Dashboard", url: "", icon: MdDashboard },
     { name: "Courses", url: "Courses", icon: IoBookOutline },
     { name: "Live sessions", url: "liveSessions", icon: FaChalkboardTeacher },
-    { name: "Exams", url: "exams", icon: TbClipboardText },
+  
+        { name: "Exams", url: "exam", icon: TbClipboardText },
+
     { name: "Quizzes", url: "quizzes", icon: BsQuestionSquare },
     { name: "Results", url: "results", icon: AiOutlineFileText },
     { name: "Students", url: "students", icon: PiUsersThree },

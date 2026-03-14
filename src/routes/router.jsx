@@ -29,7 +29,9 @@ import ResultsInstructer from "../pages/dashboardInstructer/ResultsInstructer"
 import StudentsInstructer from "../pages/dashboardInstructer/StudentsInstructer"
 import Instructer from "../pages/dashboardInStructer/Instructer"
 import InstructerSetting from "../pages/dashboardInstructer/InstructerSetting"
-
+import FirstExamPage from "../pages/dashboardInStructer/Exam/FirstExamPage"
+import SecondExamPage from "../pages/dashboardInStructer/Exam/SecondExamPage"
+import ThirdExamPage from "../pages/dashboardInStructer/Exam/ThirdExamPage"
 import NotFound from "../components/NotFound"
 import CoursesViewAnalytics from "../pages/dashboardInstructer/CoursesViewAnalytics"
 
@@ -87,6 +89,10 @@ export const router = createBrowserRouter([
     element: <DashboardLayoutInstructer />,
     children: [
       { index: true, element: <Instructer /> },
+        { path: "exam", element: <FirstExamPage /> },
+  
+      { path: "exam/second", element: <SecondExamPage /> },
+      { path: "exam/third", element: <ThirdExamPage /> },
       { path: "Courses", element: <CoursesInstructer /> },
       {
         path: "Courses/:courseId/CoursesInstructer",
