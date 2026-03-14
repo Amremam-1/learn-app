@@ -1,12 +1,13 @@
-import React from "react";
-import Container from "../../components/Ui/Container";
-import Header from "../../components/new-course/Header";
-import AddLiveSessionBtn from "../../components/LiveSession/AddLiveSessionBtn";
-import { useNavigate } from "react-router-dom";
-import UpcomingLiveSessions from "../../components/LiveSession/UpcomingLiveSessions";
+import React from "react"
+import Container from "../../components/Ui/Container"
+import Header from "../../components/instructorComponents/new-course/Header"
+import { useNavigate } from "react-router-dom"
+import UpcomingLiveSessions from "../../components/instructorComponents/LiveSession/UpcomingLiveSessions"
+import AddLiveSessionBtn from "../../components/instructorComponents/LiveSession/AddLiveSessionBtn"
+
 
 export default function LiveSessionsInstructer() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <div>
       <Container>
@@ -24,5 +25,5 @@ export default function LiveSessionsInstructer() {
         <UpcomingLiveSessions />
       </Container>
     </div>
-  );
+  )
 }

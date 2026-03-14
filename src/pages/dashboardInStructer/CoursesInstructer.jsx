@@ -1,18 +1,18 @@
-import React, { useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
-import { courses } from "../../data/homeData";
+import React, { useState, useMemo } from "react"
+import { useNavigate } from "react-router-dom"
+import { courses } from "../../data/homeData"
 
-import Container from "../../components/Ui/Container";
-import Header from "../../components/new-course/Header";
-import AddCourseBtn from "../../components/Course/AddCourseBtn";
-import SearchBar from "../../components/Course/SearchBar";
-import Filter from "../../components/Course/Filter";
-import CoursesList from "../../components/Course/CoursesList";
+import Container from "../../components/Ui/Container"
+import Header from "../../components/instructorComponents/new-course/Header"
+import CoursesList from "../../components/instructorComponents/Course/CoursesList"
+import Filter from "../../components/instructorComponents/Course/Filter"
+import SearchBar from "../../components/instructorComponents/Course/SearchBar"
+import AddCourseBtn from "../../components/instructorComponents/Course/AddCourseBtn"
 
 const CoursesInstructer = () => {
-  const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filters, setFilters] = useState({ stage: "", subject: "" });
+  const navigate = useNavigate()
+  const [searchTerm, setSearchTerm] = useState("")
+  const [filters, setFilters] = useState({ stage: "", subject: "" })
 
   // Filtered courses based on search + filters
   const filteredCourses = useMemo(() => {
@@ -20,24 +20,24 @@ const CoursesInstructer = () => {
       // Search filter
       const matchesSearch =
         course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (course.students && course.students.toString().includes(searchTerm));
+        (course.students && course.students.toString().includes(searchTerm))
 
       // Stage filter
       const matchesStage = filters.stage
         ? course.grade.toLowerCase() === filters.stage.toLowerCase()
-        : true;
+        : true
 
       // Subject filter
       const matchesSubject = filters.subject
         ? course.subject === filters.subject
-        : true;
+        : true
 
-      return matchesSearch && matchesStage && matchesSubject;
-    });
-  }, [searchTerm, filters]);
+      return matchesSearch && matchesStage && matchesSubject
+    })
+  }, [searchTerm, filters])
 
   function addCourse() {
-    navigate("//instructer/courses/new");
+    navigate("//instructer/courses/new")
   }
 
   return (
@@ -66,7 +66,7 @@ const CoursesInstructer = () => {
         <CoursesList courses={filteredCourses} />{" "}
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default CoursesInstructer;
+export default CoursesInstructer

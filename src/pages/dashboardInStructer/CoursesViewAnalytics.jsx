@@ -1,7 +1,7 @@
-import CardsCoursesInstructer from "../../components/Course/CoursesInstructerViewAnalytics/CardsCoursesInstructer"
-import EngagementOverTime from "../../components/Course/CoursesInstructerViewAnalytics/EngagementOverTime"
-import TopPerformingStudents from "../../components/Course/CoursesInstructerViewAnalytics/TopPerformingStudents"
-import NeedsAttention from "../../components/Course/CoursesInstructerViewAnalytics/NeedsAttention"
+import CardsCoursesInstructer from "../../components/instructorComponents/Course/CoursesInstructerViewAnalytics/CardsCoursesInstructer"
+import EngagementOverTime from "../../components/instructorComponents/Course/CoursesInstructerViewAnalytics/EngagementOverTime"
+import TopPerformingStudents from "../../components/instructorComponents/Course/CoursesInstructerViewAnalytics/TopPerformingStudents"
+import NeedsAttention from "../../components/instructorComponents/Course/CoursesInstructerViewAnalytics/NeedsAttention"
 import { useParams } from "react-router-dom"
 import { dashboardCourses } from "../../data/mockData"
 

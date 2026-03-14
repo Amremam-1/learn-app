@@ -1,9 +1,9 @@
-import CardsInstructer from "../../components/DashboardInstructer/CardsInstructer"
-import PerformancePie from "../../components/DashboardInstructer/PerformancePie"
-import WeeklyChart from "../../components/DashboardInstructer/WeeklyChart"
-import CourseCompletionCard from "../../components/DashboardInstructer/CourseCompletionCard"
-import UpcomingLiveSessions from "../../components/DashboardInstructer/UpcomingLiveSessions"
-import RecentActivities from "../../components/DashboardInstructer/RecentActivities"
+import CardsInstructer from "../../components/instructorComponents/DashboardInstructer/CardsInstructer"
+import PerformancePie from "../../components/instructorComponents/DashboardInstructer/PerformancePie"
+import WeeklyChart from "../../components/instructorComponents/DashboardInstructer/WeeklyChart"
+import CourseCompletionCard from "../../components/instructorComponents/DashboardInstructer/CourseCompletionCard"
+import UpcomingLiveSessions from "../../components/instructorComponents/DashboardInstructer/UpcomingLiveSessions"
+import RecentActivities from "../../components/instructorComponents/DashboardInstructer/RecentActivities"
 
 export default function Instructer() {
   return (

@@ -4,10 +4,10 @@ import { courses } from "../../data/homeData";
 
 import Container from "../../components/Ui/Container";
 import Header from "../../components/new-course/Header";
-import AddCourseBtn from "../../components/Course/AddCourseBtn";
-import SearchBar from "../../components/Course/SearchBar";
-import Filter from "../../components/Course/Filter";
-import CoursesList from "../../components/Course/CoursesList";
+import Filter from "../../components/instructorComponents/Course/Filter";
+import CoursesList from "../../components/instructorComponents/Course/CoursesList";
+import SearchBar from "../../components/instructorComponents/Course/SearchBar";
+import AddCourseBtn from "../../components/instructorComponents/Course/AddCourseBtn";
 
 const Courses = () => {
   const navigate = useNavigate();

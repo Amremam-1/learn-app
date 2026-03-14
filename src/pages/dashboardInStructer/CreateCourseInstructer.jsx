@@ -1,13 +1,13 @@
 import React, { useRef } from "react"
 import Container from "../../components/Ui/Container"
-import Header from "../../components/new-course/Header"
-import BasicInformation from "../../components/new-course/BasicInformation"
-import PricingAccess from "../../components/new-course/PricingAccess"
-import CourseCover from "../../components/new-course/CourseCover"
-import Settings from "../../components/new-course/Settings"
-import SaveButton from "../../components/new-course/SaveButton"
+import CourseCover from "../../components/instructorComponents/new-course/CourseCover"
+import Settings from "../../components/instructorComponents/new-course/Settings"
+import SaveButton from "../../components/instructorComponents/new-course/SaveButton"
 
 import { useCourseForm } from "../../hooks/useCourseForm"
+import Header from "../../components/instructorComponents/new-course/Header"
+import BasicInformation from "../../components/instructorComponents/new-course/BasicInformation"
+import PricingAccess from "../../components/instructorComponents/new-course/PricingAccess"
 
 export default function CreateCourseInstructer() {
   const fileInputRef = useRef(null)

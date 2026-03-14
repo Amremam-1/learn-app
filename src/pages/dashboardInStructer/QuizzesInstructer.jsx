@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FaArrowLeft } from "react-icons/fa"
-import QuizForm from "../../components/QuizzesInstructor/QuizForm"
-import CreateQuizStep2 from "../../components/QuizzesInstructor/CreateQuizStep2"
+import QuizForm from "../../components/instructorComponents/QuizzesInstructor/QuizForm"
+import CreateQuizStep2 from "../../components/instructorComponents/QuizzesInstructor/CreateQuizStep2"
 
 const QuizzesInstructer = () => {
   const [steps, setSteps] = useState(1)
