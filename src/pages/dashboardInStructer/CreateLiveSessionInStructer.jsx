@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { liveSessionSchema, liveSessionDefaultValues } from "../../validation"
+import { liveSessionSchema, liveSessionDefaultValues } from "../../utils/validation/index"
 import FormInput from "../../components/Ui/FormInput"
 import FormSelect from "../../components/Ui/FormSelect"
 import FormTextarea from "../../components/Ui/FormTextarea"

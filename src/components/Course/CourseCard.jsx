@@ -87,7 +87,7 @@ export default function CourseCard({ course }) {
               className="text-primary font-bold text-[12px] leading-[20px] mt-2 hover:underline"
             >
               View Analytics
-            </a>
+            </Link>
           </div>
         </div>
       </div>
