@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip
 } from "recharts";
-import { dataCharts } from "../../data/mockData.js"
+import { dataCharts } from "../../../data/mockData.js"
 
 export default function MonthlyPerformanceChart() {
 

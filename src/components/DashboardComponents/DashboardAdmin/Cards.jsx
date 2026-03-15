@@ -1,5 +1,4 @@
-import { cardsData } from "../../data/mockData"
-
+import { cardsData } from "../../../data/mockData"
 export default function Cards() {
   return (
     <>

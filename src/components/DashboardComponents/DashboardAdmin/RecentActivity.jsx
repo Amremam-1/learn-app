@@ -1,5 +1,5 @@
 
-import {recentActivity} from "../../data/mockData"
+import {recentActivity} from "../../../data/mockData"
 
 export default function RecentActivity() {
 

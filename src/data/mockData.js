@@ -390,12 +390,12 @@ export const performanceDistributioninstructer = [
 export const menuConfig = {
   admin: [
     { name: "Dashboard", url: "", icon: FaTachometerAlt },
-    { name: "Courses", url: "Courses", icon: IoBookOutline },
-    { name: "Live sessions", url: "liveSessions", icon: FaChalkboardTeacher },
-    { name: "Exams", url: "exams", icon: TbClipboardText },
-    { name: "Quizzes", url: "quizzes", icon: BsQuestionSquare },
+    { name: "Users", url: "users", icon: IoBookOutline },
+    { name: "Stages", url: "stages", icon: FaChalkboardTeacher },
+    { name: "Courses", url: "courses", icon: TbClipboardText },
+    { name: "Payment", url: "payment", icon: BsQuestionSquare },
     { name: "Results", url: "results", icon: AiOutlineFileText },
-    { name: "Students", url: "students", icon: PiUsersThree },
+    { name: "Contact us", url: "contact", icon: PiUsersThree },
   ],
 
   student: [
