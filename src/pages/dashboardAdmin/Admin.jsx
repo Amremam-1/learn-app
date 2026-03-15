@@ -1,6 +1,6 @@
-import Cards from "../../components/DashboardComponents/DashboardAdmin/Cards"
-import RecentActivity from "../../components/DashboardComponents/DashboardAdmin/RecentActivity"
-import MonthlyPerformanceChart from "../../components/DashboardComponents/DashboardAdmin/MonthlyPerformanceChart.jsx"
+import Cards from "../../components/AdminComponents/DashboardAdmin/Cards"
+import RecentActivity from "../../components/AdminComponents/DashboardAdmin/RecentActivity"
+import MonthlyPerformanceChart from "../../components/AdminComponents/DashboardAdmin/MonthlyPerformanceChart.jsx"
 
 export default function Admin() {
   return (
