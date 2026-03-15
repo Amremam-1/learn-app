@@ -1,19 +1,19 @@
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { VscSearch } from "react-icons/vsc";
-import { MdOutlinePictureAsPdf } from "react-icons/md";
-import { LuSheet } from "react-icons/lu";
-import { useState } from "react";
-import { Courses } from "../../../data/resultData";
-import FormInput from "../../Ui/FormInput";
+import { VscSearch } from "react-icons/vsc"
+import { MdOutlinePictureAsPdf } from "react-icons/md"
+import { LuSheet } from "react-icons/lu"
+import { useState } from "react"
+import { Courses } from "../../../data/resultData"
+import FormInput from "../../Ui/FormInput"
+import FormSelect from "../../Ui/FormSelect"
 
 const ResultInstructorSearch = ({
   toPDF,
   search,
-  handleFilterByCourse,
   setSearch,
+  setFilter,
+  clearFilters,
 }) => {
-  const [isCourseModel, setIsCourseModel] = useState(false);
-  const [selectedCourse, setSelectedCourse] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("")
 
   return (
     <div className="rounded-xl border border-[#0000001A] p-3 grid lg:grid-cols-6 items-center gap-4">
@@ -27,34 +27,28 @@ const ResultInstructorSearch = ({
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="relative w-full">
-        <button
-          onClick={() => setIsCourseModel(!isCourseModel)}
-          className="rounded-xl border relative w-full border-[#0000001A] bg-slate-50 h-12 lg:px-4 px-2 flex items-center justify-between text-sm"
-        >
-          <span>{selectedCourse ? selectedCourse : "All Courses"}</span>
-          <span>
-            <RiArrowDropDownLine className="lg:text-2xl text-slate-600" />
-          </span>
-        </button>
-        <div
-          className={`absolute items-start bg-white flex flex-col rounded-xl p-3 w-[200px] top-14 ${isCourseModel ? "visible opacity-100" : "invisible opacity-0"} transition-all duration-300 ease-in-out gap-3 border border-[#E2E8F0]`}
-        >
-          {Courses.map((course, idx) => (
-            <button
-              onClick={() => {
-                handleFilterByCourse(course.name);
-                setSelectedCourse(course.name);
-                setIsCourseModel(false);
-              }}
-              className="hover:text-primary capitalize text-sm"
-              key={idx}
-            >
-              {course.name}
-            </button>
-          ))}
-        </div>
-      </div>
+
+      <FormSelect
+        options={[
+          { value: "", label: "All Courses" },
+          ...Courses.map((course) => ({
+            value: course.name.toLowerCase(),
+            label: course.name,
+          })),
+        ]}
+        value={selectedCourse}
+        onChange={(value) => {
+          setSelectedCourse(value)
+
+          if (!value) {
+            clearFilters()
+          } else {
+            setFilter("course", value)
+          }
+        }}
+        className="bg-slate-50"
+      />
+
       <div className="flex items-start gap-3 rounded-xl border col-span-2 font-bold border-[#0000001A] h-12 px-4 text-xs">
         <button
           onClick={() => toPDF()}
@@ -72,7 +66,7 @@ const ResultInstructorSearch = ({
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ResultInstructorSearch;
+export default ResultInstructorSearch
